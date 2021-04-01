@@ -30,9 +30,9 @@ npm run dev
 `build`, заменив `имя_пользователя` и `имя_репозитория` на свои.
 
 ```json
-"homepage": "https://sepaev.github.io/team-project-test",
+"homepage": "https://sepaev.github.io/reacteam-project",
 "scripts": {
-  "build": "parcel build src/*.html --public-url /team-project-test/"
+  "build": "parcel build src/*.html --public-url /reacteam-project/"
 },
 ```
 
