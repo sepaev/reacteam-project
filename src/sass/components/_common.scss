@@ -1,3 +1,53 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;  
+}
+
+p {
+  margin: 0;
+}
+
+/*КОНТЕЙНЕР*/
+.container {
+  max-width: 480px;
+  min-width: 320px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $tablet) {
+      max-width: 768px;
+  }
+  
+  @media (min-width: $desktop) {
+      max-width: 1280px;
+  }
+}
+
 /*СКРЫТЫЙ КЛАСС*/
 .visually-hidden {
   position: absolute;
