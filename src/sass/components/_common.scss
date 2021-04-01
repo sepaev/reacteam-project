@@ -34,13 +34,13 @@ p {
 .container {
   max-width: 480px;
   min-width: 320px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 50px 20px;
   margin-left: auto;
   margin-right: auto;
 
   @media (min-width: $min-tablet) {
       max-width: 768px;
+      padding: 40px 20px;
   }
   
   @media (min-width: $min-desktop) {
