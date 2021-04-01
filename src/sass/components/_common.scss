@@ -39,11 +39,11 @@ p {
   margin-left: auto;
   margin-right: auto;
 
-  @media (min-width: $tablet) {
+  @media (min-width: $min-tablet) {
       max-width: 768px;
   }
   
-  @media (min-width: $desktop) {
+  @media (min-width: $min-desktop) {
       max-width: 1280px;
   }
 }
