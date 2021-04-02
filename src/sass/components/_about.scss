@@ -78,7 +78,7 @@
     display: flex;
     // align-items: center;
 
-  &::before {
+&::before {
     content: "";
     min-width: 17px;
     height: 14px;
