@@ -5,6 +5,14 @@
     padding: 50px 20px 47px 20px;
     // margin:auto;
     position:relative;
+
+    @media (min-width:481px) and (max-width:768px) {
+    width:768px;
+    padding-top:70px;
+    padding-left:42px;
+    display:flex;
+    justify-content: space-between;
+    }    
     }
 
     &__title {
@@ -72,4 +80,12 @@
         top:340px;
         left:50px;
     }
+}
+
+.hero-set  {
+    @media (min-width:481px) and (max-width:768px) {
+    display:flex;
+    flex-direction: column;
+    justify-content: left;
+}
 }
