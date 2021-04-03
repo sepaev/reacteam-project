@@ -12,7 +12,6 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 40px 15px;
-    margin: 0px;
   }
 
   &__logo {
@@ -45,7 +44,7 @@ a {
     text-transform: uppercase;
     color: $orange-text;
 
-    @media (max-width: $min-tablet) {
+    @media (max-width: 767px) {
       display: none;
     }
     @media (min-width: $min-desktop) {

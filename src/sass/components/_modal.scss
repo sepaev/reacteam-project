@@ -4,14 +4,13 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 3;
+  z-index: 333;
 
-  background-color: var(--font-modal);
+  background-color: $modal-bg;
 
   opacity: 1;
 
-  transition-duration: 250ms;
-  transition-timing-function: var(--cubic-bezier);
+  transition-duration: $transition-function;
 }
 
 .backdrop.is-hidden {
@@ -23,7 +22,7 @@
 .modal {
   height: 650px;
   width: 310px;
-  background-color: var(--text-color);
+  background-color: $orange-text;
 
   position: absolute;
   top: 50%;
@@ -40,32 +39,11 @@
     width: 528px;
   }
 
-  /*{
-  min-height: 609;
-  width: 90vw;
-  background-color: var(--text-color);
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  padding: 40px;
-  @media (min-width: 450px) {
-    width: 450px;
-  }
-  @media (min-width: 1200px) {
-    height: 581px;
-    width: 528px;
-    top: 50%;
-  }*/
-
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+  border-radius: 2px;
 
   transform: translate(-50%, -50%) scaleY(1);
 
-  transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function: var(--cubic-bezier);
+  transition-property: $dark-text-bg;
 }
 
 .is-hidden .modal {
@@ -87,8 +65,8 @@
   padding: 0px;
 
   border-radius: 50%;
-  border-color: rgba(0, 0, 0, 0.1);
-  background-color: var(--text-color);
+  border-color: $shadow10-cards;
+  background-color: $dark-text-bg;
 
   &:hover .modal-close,
   &:focus .modal-close {
@@ -103,8 +81,7 @@
   fill: var(--main-text-color);
 
   transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: var(--cubic-bezier);
+  transition: $transition-function;
 }
 
 .modal-form {
@@ -120,7 +97,7 @@
   line-height: 30px;
   letter-spacing: 0.03em;
 
-  @media (min-width: 1200px) {
+  @media (min-width: $min-desktop) {
     line-height: 23px;
   }
 
@@ -152,8 +129,7 @@
   border-radius: 4px;
 
   transition-property: border-color;
-  transition-duration: 250ms;
-  transition-timing-function: var(--cubic-bezier);
+  transition: $transition-function;
 }
 
 .modal-form__input-wrapper {
@@ -171,8 +147,7 @@
   transform: translateY(-50%);
 
   transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: var(--cubic-bezier);
+  transition: $transition-function;
 }
 
 .modal-form__group:hover .modal__input,
@@ -197,52 +172,10 @@
   margin-top: 4px;
   margin-bottom: 20px;
 
-  border: 1px solid rgba(33, 33, 33, 0.2);
+  border: 1px solid $shadow10-cards;
   box-sizing: border-box;
   border-radius: 4px;
   resize: none;
-}
-
-.modal-check {
-  position: relative;
-  text-align: center;
-  cursor: pointer;
-  font-size: 12px;
-  line-height: 14px;
-  letter-spacing: 0.03em;
-  padding-left: 18px;
-
-  @media (min-width: 1200px) {
-    font-size: 14px;
-    line-height: 24px;
-    padding-left: 28px;
-  }
-
-  margin-bottom: 30px;
-  color: #757575;
-}
-
-.modal-check__checkbox:checked ~ .modal-check__icon {
-  fill: var(--button-color);
-  border: none;
-}
-
-.modal-check__icon {
-  position: absolute;
-  cursor: pointer;
-  fill: transparent;
-  border: 1px solid var(--main-gray);
-  top: 50%;
-  left: 0px;
-  transform: translateY(-50%);
-
-  @media (min-width: 1200px) {
-    left: 14px;
-  }
-
-  transition-property: fill, border;
-  transition-duration: 250ms;
-  transition-timing-function: var(--cubic-bezier);
 }
 
 .modal__btn-send {
@@ -263,20 +196,18 @@
   margin-left: auto;
   margin-right: auto;
 
-  color: var(--text-color);
+  color: $white-text;
 
-  background: var(--button-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+  background: $dark-text-bg;
+  border-radius: 2px;
 
   border: none;
 
   transition-property: background;
-  transition-duration: 250ms;
-  transition-timing-function: var(--cubic-bezier);
+  transition: $transition-function;
 
   &:hover,
   &:focus {
-    background: #188ce8;
+    background: $orange-text;
   }
 }
