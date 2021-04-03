@@ -1,5 +1,4 @@
 .about__container {
-    // font-family: Montserrat;
     color: $dark-text-bg;
     @media screen and (max-width: 767px) {
         padding: 0 20px 50px;
@@ -45,9 +44,6 @@
         max-width: 243px;
     }
 
-    // @media screen and (min-width: 480px) {
-    //     max-width: 243px;
-    // }
     @media screen and (max-width: 1279px){
         min-width: 243px;
         margin-right: 40px;
