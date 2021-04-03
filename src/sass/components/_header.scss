@@ -1,0 +1,170 @@
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 15px;
+    margin: 0px;
+  }
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav {
+    display: flex;
+    margin-left: 144px;
+    margin-right: 60px;
+    @media (max-width: $min-desktop) {
+      display: none;
+    }
+  }
+
+  &__button {
+    width: 260px;
+    height: 48px;
+    margin-left: auto;
+    margin-right: 40px;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    background: transparent;
+    border: 2px solid $orange-text;
+    text-transform: uppercase;
+    color: $orange-text;
+
+    @media (max-width: $min-tablet) {
+      display: none;
+    }
+    @media (min-width: $min-desktop) {
+      margin-left: auto;
+      width: 336px;
+      height: 70px;
+      font-size: 14px;
+      margin-right: 0px;
+    }
+  }
+}
+
+.name {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  color: $dark-text-bg;
+  width: 100%;
+  font-size: 5px;
+  margin-top: 3px;
+  margin-bottom: 0px;
+
+  @media (min-width: $min-tablet) {
+    margin-top: 0px;
+    font-size: 8px;
+    line-height: 10px;
+    font-weight: 700;
+  }
+}
+
+.hell {
+  @media (min-width: $min-tablet) {
+    color: $orange-text;
+  }
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $dark-text-bg;
+  width: 100%;
+  font-weight: 700;
+  font-size: 12px;
+
+  @media (min-width: $min-tablet) {
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  &__icon {
+    width: 13px;
+    height: 19px;
+
+    @media (min-width: $min-tablet) {
+      width: 22px;
+      height: 30px;
+    }
+  }
+}
+
+.header-menu {
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    padding: 0px;
+
+    width: 20px;
+    height: 20px;
+
+    border: transparent;
+    background: transparent;
+    color: black;
+
+    @media (min-width: $min-desktop) {
+      display: none;
+    }
+
+    &:hover,
+    &:focus {
+      fill: $orange-text;
+      transform: $min-desktop;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.links {
+  display: flex;
+}
+
+.links-menu:not(:first-child) {
+  margin-left: 25px;
+}
+
+.links-menu :hover,
+.links-menu :focus {
+  color: $orange-text;
+}
+
+.links-item {
+  text-transform: uppercase;
+  color: $grey-text;
+
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+}
+
+.links-item.currnet {
+  color: $orange-text;
+}
