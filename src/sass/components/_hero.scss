@@ -7,14 +7,18 @@
     position:relative;
 
     @media (min-width:481px) and (max-width:768px) {
-    width:768px;
-    padding-left:42px;
-    padding-right: 36px;
-    display:flex;
-    justify-content: space-between;
+        width:768px;
+        padding-left:42px;
+        padding-right: 36px;
+        display:flex;
+        justify-content: space-between;
     }    
-    }
 
+    @media (min-width:769px) and (max-width:1280px) {
+        padding: 30px 50px 30px 86px;
+    }
+    }
+    
     &__title {
         margin-bottom:30px;
         color: $dark-text-bg;
@@ -46,7 +50,7 @@
         letter-spacing: 0.08em;
 
         @media (min-width:481px) and (max-width:768px) {
-        padding-right:55px;
+            padding-right:55px;
         }
     }
 
@@ -121,8 +125,8 @@
     @media (min-width:481px) and (max-width:768px) {
         width:332px;
         display:block;
-    // display:flex;
-    // flex-direction: column;
-    justify-content: left;
+        // display:flex;
+        // flex-direction: column;
+        justify-content: left;
 }
 }
