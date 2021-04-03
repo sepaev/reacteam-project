@@ -14,7 +14,6 @@
     }
 }
 
-
 .about__title {
     font-weight: 800;
     font-size: 20px;
@@ -55,7 +54,6 @@
     @media screen and (min-width: 1280px) {
         min-width: 530px;
         margin-right: 30px;
-
     }
 }
 
@@ -153,6 +151,7 @@
     
     text-decoration-line: underline;
     color: $orange-text;
+    cursor: pointer;
 
     @media screen and (min-width: 1280px) {
         font-size: 18px;
