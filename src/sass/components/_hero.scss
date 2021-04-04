@@ -2,8 +2,14 @@
    
     &__container {
     min-width: 320px;
+    min-height: 430px;
     padding: 0 20px 47px 20px;
     // margin:auto;
+    background-image: url("../images/hero-bg.png");
+    
+    background-repeat: no-repeat;
+    background-size: 208px 177px;
+    background-position:0;
 
     
     @media (min-width:481px) and (max-width:768px) {
