@@ -23,7 +23,6 @@
 
     &-slider {
       position: relative;
-      min-width: 0;
     }
 
     &-list {
@@ -40,35 +39,13 @@
       border: hidden;
     }
 
-    // &-dots {
-    //   display: flex;
-    //   justify-content: center;
-    //   font-size: 0;
-    //   margin: 5px;
-    // }
-    // &-dots li {
-    //   width: 54px;
-    //   height: 54px;
-    //   margin: 5px;
-    // }
-    // &-dots button {
-    //   width: 100%;
-    //   height: 100%;
-    //   border-radius: 50%;
-    //   background: url('../images/reviews-photo1.jpg') 0 0 / 100% no-repeat;
-    //   // background-image: url('../images/reviews-photo1.jpg');
-    // }
-    // &-dots li.slick-active button {
-    //   border-color: red;
-    // }
-
     // стрелочки
     &-prev {
-      left: 20px;
+      left: 0px;
       background: url('/images/arrow-left.svg') 0 0 / 100% no-repeat;
     }
     &-next {
-      right: 20px;
+      right: 0px;
       background: url('/images/arrow-right.svg') 0 0 / 100% no-repeat;
     }
   }
@@ -78,7 +55,6 @@
   min-width: 280px;
   max-width: 440px;
   width: 100%;
-  min-height: 568px;
   display: block;
   text-align: center;
   background: $white-color;
@@ -88,7 +64,7 @@
 
   &__item {
     // width: 280px;
-    margin: 0 5px;
+    // margin: 0;
   }
 
   &__picture {
@@ -128,7 +104,7 @@
     min-height: 100px;
 
     display: -webkit-box;
-    -webkit-line-clamp: 10;
+    -webkit-line-clamp: 12;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
@@ -138,9 +114,7 @@
   &__description:hover + &__button {
     display: none;
   }
-  // &__description--open {
-  //   overflow: visible;
-  // }
+
   &__button {
     display: block;
     text-align: center;
@@ -151,17 +125,14 @@
     color: $orange-text;
     text-decoration: underline;
     border: hidden;
-    // position: absolute;
     bottom: 0;
     z-index: 20;
     background-color: transparent;
-    // transform: translateX(30%);
   }
 }
 
 .reviewers {
-  // display: flex;
-  padding: 20px 30px 50px;
+  padding: 20px 30px 0;
   &__set {
     width: 182px;
     display: flex;
@@ -172,13 +143,16 @@
     height: 54px;
     margin: 0 5px;
     text-align: center;
-    // border-radius: 50%;
-  }
-  &__personal-link {
-    // border-radius: 50%;
   }
   &__picture {
     border-radius: 50%;
+    opacity: 0.7;
+  }
+  & .slick {
+    &-current .reviewers__picture {
+      // border: 1px solid black;
+      opacity: 1;
+    }
   }
 }
 * {
