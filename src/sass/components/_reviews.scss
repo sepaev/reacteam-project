@@ -2,8 +2,8 @@
   background-color: $light-bg;
   // background-color: grey;
   &__container {
-    min-width: 320px;
-    max-width: 480px;
+    min-width: $min-flexmobile;
+    max-width: $min-mobile;
     width: auto;
   }
 
@@ -52,8 +52,8 @@
 }
 
 .reviewer {
-  min-width: 280px;
-  max-width: 440px;
+  min-width: calc ($min-flexmobile - 40px);
+  max-width: calc ($min-mobile - 40px);
   width: 100%;
   display: block;
   text-align: center;
@@ -96,6 +96,7 @@
     color: $grey-text;
     margin-bottom: 10px;
   }
+
   &__description {
     @include font(500, 12px, 20px, 0em);
     text-align: center;
@@ -107,6 +108,27 @@
     -webkit-line-clamp: 12;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    @media (min-width: $min-mobile) {
+      -webkit-line-clamp: 7;
+      @media (min-width: $min-tablet) {
+        -webkit-line-clamp: 5;
+      }
+    }
+    @media (max-width: $min-mobile) {
+      -webkit-line-clamp: 8;
+      @media (max-width: 448px) {
+        -webkit-line-clamp: 9;
+        @media (max-width: 416px) {
+          -webkit-line-clamp: 10;
+          @media (max-width: 384px) {
+            -webkit-line-clamp: 11;
+            @media (max-width: 352px) {
+              -webkit-line-clamp: 12;
+            }
+          }
+        }
+      }
+    }
   }
   &__description:hover {
     -webkit-line-clamp: 100;
@@ -119,8 +141,8 @@
     display: block;
     text-align: center;
     justify-content: center;
-    min-width: 240px;
-    max-width: 400px;
+    min-width: calc ($min-flexmobile - 80px);
+    max-width: calc ($min-mobile - 80px);
     margin: auto;
     color: $orange-text;
     text-decoration: underline;
