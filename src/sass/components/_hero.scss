@@ -4,8 +4,8 @@
     width: 320px;
     padding: 0 20px 47px 20px;
     // margin:auto;
-    position:relative;
 
+    
     @media (min-width:481px) and (max-width:768px) {
         width:768px;
         padding-left:42px;
@@ -22,6 +22,9 @@
     }
     }
     
+   
+
+
     &__title {
         margin-bottom:30px;
         color: $dark-text-bg;
@@ -61,7 +64,7 @@
         letter-spacing: 0.08em;
 
         @media (min-width:481px) and (max-width:768px) {
-            padding-right:55px;
+            padding-right:45px;
         }
     }
 
@@ -92,6 +95,7 @@
         text-align: center;
         letter-spacing: 0.08em;
         text-transform: uppercase;
+        cursor:pointer;
 
         @media (min-width:481px) and (max-width:768px) {
             align-items: left;
@@ -99,18 +103,25 @@
         }
     }
 
+    &__bg {
+        align-items: center;
+
+        @media (min-width:481px) and (max-width:768px) {
+            
+        }
+    }
+
     &__img {
-        width:178px;
-        height: 177px;
+        width:208px;
+        height: 177.5px;
         align-self:center;
         margin:auto;
         
 
         @media (min-width:481px) and (max-width:768px){
-            width:321px;
-            height:320px;
-            margin:0;
-            align-self: right;
+            width:375px;
+            height:321px;
+            
             margin-top: 10px;
         }
 
@@ -123,31 +134,36 @@
         }
     }
 
-    &__gradient {
-        width:208px;
-        height:148px;
-        position:absolute;
-        top:290px;
-        left:50px;
+    // &__gradient {
+    //     width:208px;
+    //     height:148px;
+    //     position:absolute;
+    //     top:10px;
+    //     left:31px;
+        
 
-        @media (min-width:481px) and (max-width:768px) {
-            width:375px;
-            height:269px;
-            top:27px;
-            left:376px;
+    //     @media (min-width:481px) and (max-width:768px) {
+    //         width:375px;
+    //         height:269px;
+    //         top:27px;
+    //         left:-8.5px;
             
-        }
+    //     }
 
-        @media (min-width:769px) and (max-width:1280px) {
-            width:607px;
-            height: 338px;
-            top: 37px;
-            left:620px;
-        }
-    }
+    //     @media (min-width:769px) and (max-width:1280px) {
+    //         width:607px;
+    //         height: 338px;
+    //         top: 37px;
+    //         left:620px;
+    //     }
+    // }
 }
 
+
 .hero-set  {
+    
+    
+
     @media (min-width:481px) and (max-width:768px) {
         width:332px;
         display:block;
