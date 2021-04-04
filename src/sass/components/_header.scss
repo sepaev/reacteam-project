@@ -3,7 +3,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 15px;
+    padding: 30px 20px;
+
+    @media (min-width: $min-tablet) {
+      padding: 42px 40px 70px 40px;
+    }
+    @media (min-width: $min-desktop) {
+      padding: 33px 5px 45px 5px;
+    }
   }
 
   &__logo {
