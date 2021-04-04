@@ -3,14 +3,13 @@
    
     &__container {
     min-width: 320px;
-    min-height: 430px;
+    min-height: 488px;
     padding: 0 20px 47px 20px;
     // margin:auto;
-    background-image: url("../images/mobile-hero.png");
-    
+    background-image: url("../images/mobile-hero.png"), url("../images/mobile-hero-gradient.png");
     background-repeat: no-repeat;
-    background-size: 208px 177px;
-    background-position:0;
+    background-size: 177px 177px, 208px 148px;
+    background-position:50% 288px, 50% 295px;
 
     
     @media (min-width:481px) and (max-width:768px) {
