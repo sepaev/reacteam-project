@@ -4,97 +4,71 @@
      padding-top: 50px; 
      min-width: 320px;
     
-     width: 100vw;
+     
+     height: 520px;
+     @media screen and (min-width:$min-desktop) {
+      height: 840px;
     }
+}
  
-.contact__image{
-  height: 520px;
-}
+.contact{
+  @media screen and (max-width: 479px) {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/footer-mobile.jpg);
 
-@media screen and (min-width:$min-desktop){
-  .contact__image{
-    height: 840px;
+  background-position: center;
+  background-size: cover;
+ 
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+   background-image:  linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/footer-mobile@2x.jpg);
+   background-size: cover;
+   background-position: center;
   }
 }
-@media screen and (max-width: 479px) {
-  .contact-image{
-
-
-background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/footer-mobile.jpg);
-
-background-position: center;
-background-size: cover;
-
-  }
-@media (min-device-pixel-ratio: 2),
-(min-resolution: 192dpi),
-(min-resolution: 2dppx) {
-.contact__image {
- background-image:  linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/footer-mobile@2x.jpg);
- background-size: cover;
- background-position: center;
-}
-}
-}
-
-@media screen and (min-width: $min-mobile){
-  .contact__image{
+   @media screen and (min-width: $min-mobile) {
     height: 520px;
     background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/footer-mobile.jpg);
     background-size: 480px 520px;
     background-position: center;
-    
-  }
-
-@media (min-device-pixel-ratio: 2),
-(min-resolution: 192dpi),
-(min-resolution: 2dppx) {
-.contact__image {
+  
+  
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
   background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/footer-mobile@2x.jpg);
   background-size: 480px 520px;
   background-position: center;
-  
- } 
+  } 
 }
-} 
-@media screen and (min-width: $min-tablet ){
-  .contact__image{
+   @media screen and (min-width: $min-tablet ){
     height: 520px;
     background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/footer-tablet.jpg);
     background-size: 768px 520px;
     background-position: center;
     
-  }
 
-@media (min-device-pixel-ratio: 2),
-(min-resolution: 192dpi),
-(min-resolution: 2dppx) {
-.contact__image {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/footer-tablet@2x.jpg);
-  background-size: 768px 520px;
-  background-position: center;
-  
- } 
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/footer-tablet@2x.jpg);
+    background-size: 768px 520px;
+    background-position: center;
+  } 
 }
-}
-@media screen and (min-width:$min-desktop){
-  .contact__image{
+    @media screen and (min-width:$min-desktop){
     height: 840px;
     background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/footer-desctop.jpg);
     background-size: cover;
     background-position: center;
-    
-  }
 
-@media (min-device-pixel-ratio: 2),
-(min-resolution: 192dpi),
-(min-resolution: 2dppx) {
-.contact__image {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/footer-desctop@2x.jpg);
-  background-size: cover;
-  background-position: center;
-  
- } 
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/footer-desctop@2x.jpg);
+    background-size: cover;
+    background-position: center;
+  } 
 }
 }
 
@@ -115,22 +89,19 @@ background-size: cover;
     
     color:  $white-text;
    
-}
-
 @media screen and (min-width:  $min-tablet) {
-  .contact__title {
+  
     padding-left: 40px;
     padding-right: 40px;
 
-    font-family: Montserrat;
     font-style: Bold;
     font-size: 26px;
     line-height: 1.30
- }
+ 
 }
 
 @media screen and (min-width:$min-desktop){
-  .contact__title{
+  
     padding-top: 100px;
     text-align: center;
 
@@ -138,9 +109,9 @@ background-size: cover;
     font-weight: 800;
     font-size: 46px;
     line-height: 130%;
-  }
+  
 }
-
+}
 
 .contact__title--orange {
     font-family: Montserrat;
@@ -150,26 +121,24 @@ background-size: cover;
     line-height: 136%;
 
     color: $orange-text;
-}
+
 @media screen and (min-width: $min-tablet) {
-  .contact__title--orange  {
-    
     font-family: Montserrat;
     font-style: Bold;
     font-size: 26px;
-    line-height: 1.30
-  }
+    line-height: 1.30;  
 }
 
 @media screen and (min-width:$min-desktop) {
-  .contact__title--orange {
+  
     font-style: normal;
     font-weight: 800;
     font-size: 46px;
     line-height: 130%;
-  }
+  
 }
 
+}
 .contact__text {
   margin-top: 30px;
   padding-right: 20px;
@@ -183,26 +152,26 @@ background-size: cover;
   line-height: 1.25;
 
   color: $white-text;
-}
+
 @media screen and (min-width: $min-tablet) {
-  .contact__text{
+
   margin-top: 30px;
   padding-left: 158px;
   padding-right: 158px;
   text-align: center;
   
-  font-family: Montserrat;
+  
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
   line-height: 1.214;
   
   color: $white-text;
-}
+
 }
 
 @media screen and (min-width:$min-desktop) {
-  .contact__text{
+  
     padding-left: 295px;
     padding-right: 295px;
     margin-top: 50px;
@@ -211,9 +180,9 @@ background-size: cover;
     font-weight: 600;
     font-size: 30px;
     line-height: 1.23;
-  }
+  
 }
-
+}
 .contact__text--orange {
   font-family: Montserrat;
   font-style: normal;
@@ -222,47 +191,51 @@ background-size: cover;
   line-height: 1.25;
 
   color: $orange-text;
-}
+
 @media screen and (min-width: $min-tablet) {
-  .contact__text--orange{
+
   font-size: 14px;
   line-height: 1.214;
-}
+
 }
 
 @media screen and (min-width:$min-desktop) {
-  .contact__text--orange {
+  
     font-style: normal;
     font-weight: 600;
     font-size: 30px;
     line-height: 1.23;
-  }
+  
+}
 }
 .contact-form {
   
   margin-top: 30px;
-}
+
 
 @media screen and (min-width:  $min-tablet){
-  .contact-form{ 
+  
     margin-top: 40px;
-  }
+  
 }
 
 @media screen and (min-width:$min-desktop){
-  .contact-form{
+  
     margin-top: 56px;
-  }
+  
+}
 }
 .contact-form__wrapper:not(:first-child) {
   margin-top: 20px;  
+
+
+@media screen and (min-width:$min-desktop) {
+  
+    margin-top: 30px;  
+  
+}
 }
 
-@media screen and (min-width:$min-desktop){
-  .contact-form__wrapper:not(:first-child){
-    margin-top: 30px;  
-  }
-}
 .contact-form__wrapper{
   position: relative;
   height: 48px;
@@ -270,21 +243,23 @@ background-size: cover;
   margin-right: auto;
   margin-left: auto;
   
-}
+
 
 @media screen and (min-width:  $min-tablet){
-  .contact-form__wrapper{
+  
     height: 48px;
     width: 390px;
-  }
+  
 }
 
 @media screen and (min-width:$min-desktop){
-  .contact-form__wrapper{
+  
     height: 70px;
     width: 478px;
-  }
+  
 }
+}
+
 .contact-form__item {
 
   position: absolute;
@@ -302,7 +277,7 @@ background-size: cover;
 }
 
 .contact-form__text {
-  border: none;
+  
   margin: 0px;
   padding: 0px;
   width: 100%;
@@ -315,22 +290,23 @@ background-size: cover;
 }
 
 .contact-form__text:hover + .contact-form__item{
-  transform: translateY(-30px);
+  transform: translateY(-40px);
   transition: transform  $transition-function;
   border-color:  $white-text;
-}
+
 
 
 @media screen and (min-width:  $min-tablet) {
-  .contact-form__text:hover + .contact-form__item{
+  
     transform: translateY(-40px)
-  }
+  
 }
 
 @media screen and (min-width:$min-desktop) {
-  .contact-form__text:hover + .contact-form__item {
+  
     transform: translateY(-50px)
-  }
+  
+}
 }
 
 .contact-form__button{
@@ -339,24 +315,21 @@ background-size: cover;
   width: 260px;
   margin-right: auto;
   margin-left: auto;
-}
+
 
 @media screen and (min-width:  $min-tablet){
-  .contact-form__button{
     margin-top: 31px;
     height: 48px;
     width: 260px;
-  }
+  
 }
 
 @media screen and (min-width:$min-desktop) {
-  .contact-form__button{
     margin-top: 80px;
     height: 70px;
     width: 354px;
-  }
 }
-
+}
 .contact-form__btn {
   padding: 16px 10px;
   width: 100%;
@@ -367,7 +340,6 @@ background-size: cover;
   font-weight: bold;
   font-size: 12px;
   line-height: 1.25;
-
   text-transform: uppercase;
 
   color: $white-text;
