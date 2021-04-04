@@ -70,10 +70,10 @@
     background-position: center;
   } 
 }
-}
 
 
-.contact__title {
+
+&__title {
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 50px;
@@ -113,7 +113,7 @@
 }
 }
 
-.contact__title--orange {
+&__title--orange {
     font-family: Montserrat;
     font-style: normal;
     font-weight: 800;
@@ -139,7 +139,7 @@
 }
 
 }
-.contact__text {
+&__text {
   margin-top: 30px;
   padding-right: 20px;
   padding-left: 20px;
@@ -183,7 +183,7 @@
   
 }
 }
-.contact__text--orange {
+&__text--orange {
   font-family: Montserrat;
   font-style: normal;
   font-weight: 600;
@@ -208,6 +208,7 @@
   
 }
 }
+}
 .contact-form {
   
   margin-top: 30px;
@@ -224,8 +225,8 @@
     margin-top: 56px;
   
 }
-}
-.contact-form__wrapper:not(:first-child) {
+
+&__wrapper:not(:first-child) {
   margin-top: 20px;  
 
 
@@ -236,7 +237,7 @@
 }
 }
 
-.contact-form__wrapper{
+&__wrapper{
   position: relative;
   height: 48px;
   width: 280px;
@@ -260,7 +261,7 @@
 }
 }
 
-.contact-form__item {
+&__item {
 
   position: absolute;
   top: 50%;
@@ -276,7 +277,7 @@
   color: $white-text ;
 }
 
-.contact-form__text {
+&__text {
   
   margin: 0px;
   padding: 0px;
@@ -289,7 +290,7 @@
   
 }
 
-.contact-form__text:hover + .contact-form__item{
+&__text:hover + &__item{
   transform: translateY(-40px);
   transition: transform  $transition-function;
   border-color:  $white-text;
@@ -309,7 +310,7 @@
 }
 }
 
-.contact-form__button{
+&__button{
   margin-top: 50px;
   height: 48px;
   width: 260px;
@@ -330,7 +331,7 @@
     width: 354px;
 }
 }
-.contact-form__btn {
+&__btn {
   padding: 16px 10px;
   width: 100%;
   background-color: $orange-text;
@@ -345,3 +346,4 @@
   color: $white-text;
 }
 
+}
