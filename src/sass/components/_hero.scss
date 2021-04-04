@@ -38,7 +38,19 @@
     }
     }
     
-   
+    &__set  {
+    
+    
+
+        @media (min-width:481px) and (max-width:768px) {
+            width:332px;
+            display:block;
+            // display:flex;
+            // flex-direction: column;
+            justify-content: left;
+        }
+    }
+
     &__title {
         margin-bottom:30px;
         color: $dark-text-bg;
@@ -237,15 +249,3 @@
 }
 
 
-.hero-set  {
-    
-    
-
-    @media (min-width:481px) and (max-width:768px) {
-        width:332px;
-        display:block;
-        // display:flex;
-        // flex-direction: column;
-        justify-content: left;
-}
-}
