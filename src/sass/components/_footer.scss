@@ -1,0 +1,28 @@
+.footer{
+    min-width: 320px;
+   
+}
+
+.footer-logo{
+  padding-top: 26px;
+  height: 30px;
+  width: 85px;
+ 
+
+}
+
+.footer-logo__item {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 1.23;
+    
+    
+    color: $dark-text-bg;
+}
+
+.footer-logo__icon {
+  width: 15px;
+  height: 20.5px;
+}
