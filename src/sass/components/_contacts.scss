@@ -7,12 +7,15 @@
      width: 100vw;
     }
  
-     .contact__image{
-        height: 520px;
-   
-    
-     }
+.contact__image{
+  height: 520px;
+}
 
+@media screen and (min-width:$min-desktop){
+  .contact__image{
+    height: 840px;
+  }
+}
 @media screen and (max-width: 479px) {
   .contact-image{
 
@@ -76,7 +79,7 @@ background-size: cover;
 }
 @media screen and (min-width:$min-desktop){
   .contact__image{
-    height: 520px;
+    height: 840px;
     background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/footer-desctop.jpg);
     background-size: cover;
     background-position: center;
@@ -123,7 +126,18 @@ background-size: cover;
     font-style: Bold;
     font-size: 26px;
     line-height: 1.30
+ }
+}
 
+@media screen and (min-width:$min-desktop){
+  .contact__title{
+    padding-top: 100px;
+    text-align: center;
+
+    font-style: normal;
+    font-weight: 800;
+    font-size: 46px;
+    line-height: 130%;
   }
 }
 
@@ -146,6 +160,16 @@ background-size: cover;
     line-height: 1.30
   }
 }
+
+@media screen and (min-width:$min-desktop) {
+  .contact__title--orange {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 46px;
+    line-height: 130%;
+  }
+}
+
 .contact__text {
   margin-top: 30px;
   padding-right: 20px;
@@ -160,7 +184,7 @@ background-size: cover;
 
   color: $white-text;
 }
-@media screen and (min-width: $min-tablet){
+@media screen and (min-width: $min-tablet) {
   .contact__text{
   margin-top: 30px;
   padding-left: 158px;
@@ -177,7 +201,18 @@ background-size: cover;
 }
 }
 
-
+@media screen and (min-width:$min-desktop) {
+  .contact__text{
+    padding-left: 295px;
+    padding-right: 295px;
+    margin-top: 50px;
+    
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1.23;
+  }
+}
 
 .contact__text--orange {
   font-family: Montserrat;
@@ -188,36 +223,74 @@ background-size: cover;
 
   color: $orange-text;
 }
-@media screen and (min-width: $min-tablet){
+@media screen and (min-width: $min-tablet) {
   .contact__text--orange{
   font-size: 14px;
   line-height: 1.214;
 }
+}
+
+@media screen and (min-width:$min-desktop) {
+  .contact__text--orange {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1.23;
+  }
 }
 .contact-form {
   
   margin-top: 30px;
 }
 
-.contact-form__wrapper:not( :last-child) {
-  margin-bottom: 20px;  
+@media screen and (min-width:  $min-tablet){
+  .contact-form{ 
+    margin-top: 40px;
+  }
 }
 
+@media screen and (min-width:$min-desktop){
+  .contact-form{
+    margin-top: 56px;
+  }
+}
+.contact-form__wrapper:not(:first-child) {
+  margin-top: 20px;  
+}
+
+@media screen and (min-width:$min-desktop){
+  .contact-form__wrapper:not(:first-child){
+    margin-top: 30px;  
+  }
+}
 .contact-form__wrapper{
   position: relative;
   height: 48px;
-  margin-right: 20px;
-  margin-left: 20px;
+  width: 280px;
+  margin-right: auto;
+  margin-left: auto;
   
-
-  
-
 }
 
+@media screen and (min-width:  $min-tablet){
+  .contact-form__wrapper{
+    height: 48px;
+    width: 390px;
+  }
+}
+
+@media screen and (min-width:$min-desktop){
+  .contact-form__wrapper{
+    height: 70px;
+    width: 478px;
+  }
+}
 .contact-form__item {
 
   position: absolute;
-  top: 15px;
+  top: 50%;
+  transform:translateY(-50%);
+  
   left: 28px;
   font-family: Montserrat;
   font-style: normal;
@@ -229,6 +302,7 @@ background-size: cover;
 }
 
 .contact-form__text {
+  border: none;
   margin: 0px;
   padding: 0px;
   width: 100%;
@@ -236,18 +310,51 @@ background-size: cover;
   padding: 10px 100px;
   background-color: transparent;
   border-color: white;
- color: white;
+  color: white;
   
 }
 
 .contact-form__text:hover + .contact-form__item{
   transform: translateY(-30px);
-} 
+  transition: transform  $transition-function;
+  border-color:  $white-text;
+}
+
+
+@media screen and (min-width:  $min-tablet) {
+  .contact-form__text:hover + .contact-form__item{
+    transform: translateY(-40px)
+  }
+}
+
+@media screen and (min-width:$min-desktop) {
+  .contact-form__text:hover + .contact-form__item {
+    transform: translateY(-50px)
+  }
+}
+
 .contact-form__button{
   margin-top: 50px;
-  margin-left: 30px;
-  margin-right: 30px;
- 
+  height: 48px;
+  width: 260px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media screen and (min-width:  $min-tablet){
+  .contact-form__button{
+    margin-top: 31px;
+    height: 48px;
+    width: 260px;
+  }
+}
+
+@media screen and (min-width:$min-desktop) {
+  .contact-form__button{
+    margin-top: 80px;
+    height: 70px;
+    width: 354px;
+  }
 }
 
 .contact-form__btn {
