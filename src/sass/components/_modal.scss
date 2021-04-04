@@ -44,6 +44,85 @@
   transform: translate(-50%, -50%) scaleY(1);
 
   transition-property: $dark-text-bg;
+
+  &__input {
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    padding-left: 32px;
+
+    font-family: inherit;
+    outline: none;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    transition-property: border-color;
+    transition: $transition-function;
+  }
+  &__icon {
+    position: absolute;
+    top: 52%;
+    left: 10px;
+    transform: translateY(-50%);
+
+    transition-property: fill;
+    transition: $transition-function;
+  }
+
+  &__coment {
+    margin: 0px;
+  }
+
+  &__textarea {
+    width: 100%;
+    height: 120px;
+
+    padding: 12px 16px;
+    margin-top: 4px;
+    margin-bottom: 20px;
+
+    border: 1px solid $shadow10-cards;
+    box-sizing: border-box;
+    border-radius: 4px;
+    resize: none;
+  }
+
+  &__btn-send {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    width: 200px;
+    height: 50px;
+
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.06em;
+    text-align: center;
+
+    padding: 10px 56px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    color: $white-text;
+
+    background: $dark-text-bg;
+    border-radius: 2px;
+
+    border: none;
+
+    transition-property: background;
+    transition: $transition-function;
+
+    &:hover,
+    &:focus {
+      background: $orange-text;
+      transition-duration: $transition-function;
+    }
+  }
 }
 
 .is-hidden .modal {
@@ -89,7 +168,7 @@
   flex-direction: column;
 }
 
-.modal-haeding {
+.modal-heading {
   text-align: center;
 
   font-size: 20px;
@@ -115,39 +194,12 @@
   margin-bottom: 10px;
 }
 
-.modal__input {
-  cursor: pointer;
-  width: 100%;
-  height: 40px;
-  padding-left: 32px;
-
-  font-family: inherit;
-  outline: none;
-
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  box-sizing: border-box;
-  border-radius: 4px;
-
-  transition-property: border-color;
-  transition: $transition-function;
-}
-
 .modal-form__input-wrapper {
   cursor: pointer;
   position: relative;
   height: 40px;
 
   margin-top: 4px;
-}
-
-.modal__icon {
-  position: absolute;
-  top: 52%;
-  left: 10px;
-  transform: translateY(-50%);
-
-  transition-property: fill;
-  transition: $transition-function;
 }
 
 .modal-form__group:hover .modal__input,
@@ -158,56 +210,4 @@
 .modal-form__group:hover .modal__input + .modal__icon,
 .modal-form__group:focus .modal__input + .modal__icon {
   fill: var(--button-color);
-}
-
-.modal__coment {
-  margin: 0px;
-}
-
-.modal__textarea {
-  width: 100%;
-  height: 120px;
-
-  padding: 12px 16px;
-  margin-top: 4px;
-  margin-bottom: 20px;
-
-  border: 1px solid $shadow10-cards;
-  box-sizing: border-box;
-  border-radius: 4px;
-  resize: none;
-}
-
-.modal__btn-send {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-
-  width: 200px;
-  height: 50px;
-
-  font-size: 16px;
-  line-height: 30px;
-  letter-spacing: 0.06em;
-  text-align: center;
-
-  padding: 10px 56px;
-
-  margin-left: auto;
-  margin-right: auto;
-
-  color: $white-text;
-
-  background: $dark-text-bg;
-  border-radius: 2px;
-
-  border: none;
-
-  transition-property: background;
-  transition: $transition-function;
-
-  &:hover,
-  &:focus {
-    background: $orange-text;
-  }
 }
