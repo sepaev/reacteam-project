@@ -3,22 +3,98 @@
   .contacts {
      padding-top: 50px; 
      min-width: 320px;
-   
+    
      width: 100vw;
     }
-@media screen and ( min-width: $min-flexmobile) {
-     .contact-overlay{
+ 
+     .contact__image{
         height: 520px;
    
     
-     
-     
-     background-image:  url(../images/footer-mobile1.png);
-     
-     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
-     background-position: center;
-    }
+     }
+
+@media screen and (max-width: 479px) {
+  .contact-image{
+
+
+background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/footer-mobile.jpg);
+
+background-position: center;
+background-size: cover;
+
+  }
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+.contact__image {
+ background-image:  linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/footer-mobile@2x.jpg);
+ background-size: cover;
+ background-position: center;
 }
+}
+}
+
+@media screen and (min-width: $min-mobile){
+  .contact__image{
+    height: 520px;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/footer-mobile.jpg);
+    background-size: 480px 520px;
+    background-position: center;
+    
+  }
+
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+.contact__image {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/footer-mobile@2x.jpg);
+  background-size: 480px 520px;
+  background-position: center;
+  
+ } 
+}
+} 
+@media screen and (min-width: $min-tablet ){
+  .contact__image{
+    height: 520px;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/footer-tablet.jpg);
+    background-size: 768px 520px;
+    background-position: center;
+    
+  }
+
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+.contact__image {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/footer-tablet@2x.jpg);
+  background-size: 768px 520px;
+  background-position: center;
+  
+ } 
+}
+}
+@media screen and (min-width:$min-desktop){
+  .contact__image{
+    height: 520px;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/footer-desctop.jpg);
+    background-size: cover;
+    background-position: center;
+    
+  }
+
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+.contact__image {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/footer-desctop@2x.jpg);
+  background-size: cover;
+  background-position: center;
+  
+ } 
+}
+}
+
 
 .contact__title {
     padding-left: 20px;
@@ -38,6 +114,20 @@
    
 }
 
+@media screen and (min-width:  $min-tablet) {
+  .contact__title {
+    padding-left: 40px;
+    padding-right: 40px;
+
+    font-family: Montserrat;
+    font-style: Bold;
+    font-size: 26px;
+    line-height: 1.30
+
+  }
+}
+
+
 .contact__title--orange {
     font-family: Montserrat;
     font-style: normal;
@@ -47,7 +137,15 @@
 
     color: $orange-text;
 }
-
+@media screen and (min-width: $min-tablet) {
+  .contact__title--orange  {
+    
+    font-family: Montserrat;
+    font-style: Bold;
+    font-size: 26px;
+    line-height: 1.30
+  }
+}
 .contact__text {
   margin-top: 30px;
   padding-right: 20px;
@@ -62,6 +160,24 @@
 
   color: $white-text;
 }
+@media screen and (min-width: $min-tablet){
+  .contact__text{
+  margin-top: 30px;
+  padding-left: 158px;
+  padding-right: 158px;
+  text-align: center;
+  
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.214;
+  
+  color: $white-text;
+}
+}
+
+
 
 .contact__text--orange {
   font-family: Montserrat;
@@ -72,7 +188,12 @@
 
   color: $orange-text;
 }
-
+@media screen and (min-width: $min-tablet){
+  .contact__text--orange{
+  font-size: 14px;
+  line-height: 1.214;
+}
+}
 .contact-form {
   
   margin-top: 30px;
