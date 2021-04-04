@@ -1,0 +1,86 @@
+.guarantee{
+    &__container {
+        @media screen and (min-width: 768px){
+            max-width: 768px;
+            padding: 0 40px 50px;
+        }        
+        @media screen and (min-width: 1280px) {
+            max-width: calc(1314px + 183px * 2);
+            padding: 0 183px;
+        }
+    }
+
+    &__box {
+        background-color: $grey-bg;
+        position: relative;
+
+        @media screen and (max-width: 767px) {
+            padding: 30px 20px 31px 27px;
+        }
+        @media screen and (min-width: 768px) {
+            padding: 30px 50px 30px 86px;
+        }        
+        @media screen and (min-width: 1280px) {
+            padding: 50px 112px 45px 119px;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        font-weight: 800;
+        font-size: 26px;
+        line-height: calc(34 / 26);
+        letter-spacing: 0.03em;
+        
+        @media screen and (max-width: 1279px) {
+            margin-bottom: 30px;
+        }
+        @media screen and (min-width: 1280px) {
+            margin-bottom: 50px;
+            font-size: 46px;
+            line-height: calc(60 / 46);
+        }
+    }
+
+    &__item {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: calc(20 / 12);
+        padding-left: 28px;
+
+
+        color: $graphite-text;
+        @media screen and (min-width: 1280px) {
+            font-size: 20px;
+            line-height: calc(28 / 20);
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            left: 20px;
+            width: 15px;
+            height: 20px;
+            background-image: url("../images/icon-guarantee.svg");
+
+            @media screen and (min-width: 768px) and (max-width: 1279px) {
+                left: 79px;
+            }
+            @media screen and (min-width: 1280px) {
+                left: 112px;
+            }
+        }
+    }
+
+    &__item:not(:last-child) {
+        padding-bottom: 23px;
+        border-left: 1px dashed $grey-text;
+        @media screen and (min-width: 768px){
+            padding-bottom: 20px;
+        }
+
+    }
+
+    &__item--element {
+        color: $orange-text;
+    }
+}
