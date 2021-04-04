@@ -1,0 +1,349 @@
+
+
+  .contacts {
+     padding-top: 50px; 
+     min-width: 320px;
+    
+     
+     height: 520px;
+     @media screen and (min-width:$min-desktop) {
+      height: 840px;
+    }
+}
+ 
+.contact{
+  @media screen and (max-width: 479px) {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/footer-mobile.jpg);
+
+  background-position: center;
+  background-size: cover;
+ 
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+   background-image:  linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/footer-mobile@2x.jpg);
+   background-size: cover;
+   background-position: center;
+  }
+}
+   @media screen and (min-width: $min-mobile) {
+    height: 520px;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/footer-mobile.jpg);
+    background-size: 480px 520px;
+    background-position: center;
+  
+  
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/footer-mobile@2x.jpg);
+  background-size: 480px 520px;
+  background-position: center;
+  } 
+}
+   @media screen and (min-width: $min-tablet ){
+    height: 520px;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/footer-tablet.jpg);
+    background-size: 768px 520px;
+    background-position: center;
+    
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/footer-tablet@2x.jpg);
+    background-size: 768px 520px;
+    background-position: center;
+  } 
+}
+    @media screen and (min-width:$min-desktop){
+    height: 840px;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/footer-desctop.jpg);
+    background-size: cover;
+    background-position: center;
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/footer-desctop@2x.jpg);
+    background-size: cover;
+    background-position: center;
+  } 
+}
+
+
+
+&__title {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 50px;
+    
+    text-align: center;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 136%;
+    
+    
+    color:  $white-text;
+   
+@media screen and (min-width:  $min-tablet) {
+  
+    padding-left: 40px;
+    padding-right: 40px;
+
+    font-style: Bold;
+    font-size: 26px;
+    line-height: 1.30
+ 
+}
+
+@media screen and (min-width:$min-desktop){
+  
+    padding-top: 100px;
+    text-align: center;
+
+    font-style: normal;
+    font-weight: 800;
+    font-size: 46px;
+    line-height: 130%;
+  
+}
+}
+
+&__title--orange {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 136%;
+
+    color: $orange-text;
+
+@media screen and (min-width: $min-tablet) {
+    font-family: Montserrat;
+    font-style: Bold;
+    font-size: 26px;
+    line-height: 1.30;  
+}
+
+@media screen and (min-width:$min-desktop) {
+  
+    font-style: normal;
+    font-weight: 800;
+    font-size: 46px;
+    line-height: 130%;
+  
+}
+
+}
+&__text {
+  margin-top: 30px;
+  padding-right: 20px;
+  padding-left: 20px;
+  text-align: center;
+  
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.25;
+
+  color: $white-text;
+
+@media screen and (min-width: $min-tablet) {
+
+  margin-top: 30px;
+  padding-left: 158px;
+  padding-right: 158px;
+  text-align: center;
+  
+  
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.214;
+  
+  color: $white-text;
+
+}
+
+@media screen and (min-width:$min-desktop) {
+  
+    padding-left: 295px;
+    padding-right: 295px;
+    margin-top: 50px;
+    
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1.23;
+  
+}
+}
+&__text--orange {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.25;
+
+  color: $orange-text;
+
+@media screen and (min-width: $min-tablet) {
+
+  font-size: 14px;
+  line-height: 1.214;
+
+}
+
+@media screen and (min-width:$min-desktop) {
+  
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1.23;
+  
+}
+}
+}
+.contact-form {
+  
+  margin-top: 30px;
+
+
+@media screen and (min-width:  $min-tablet){
+  
+    margin-top: 40px;
+  
+}
+
+@media screen and (min-width:$min-desktop){
+  
+    margin-top: 56px;
+  
+}
+
+&__wrapper:not(:first-child) {
+  margin-top: 20px;  
+
+
+@media screen and (min-width:$min-desktop) {
+  
+    margin-top: 30px;  
+  
+}
+}
+
+&__wrapper{
+  position: relative;
+  height: 48px;
+  width: 280px;
+  margin-right: auto;
+  margin-left: auto;
+  
+
+
+@media screen and (min-width:  $min-tablet){
+  
+    height: 48px;
+    width: 390px;
+  
+}
+
+@media screen and (min-width:$min-desktop){
+  
+    height: 70px;
+    width: 478px;
+  
+}
+}
+
+&__item {
+
+  position: absolute;
+  top: 50%;
+  transform:translateY(-50%);
+  
+  left: 28px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.214;
+  
+  color: $white-text ;
+}
+
+&__text {
+  
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  padding: 10px 100px;
+  background-color: transparent;
+  border-color: white;
+  color: white;
+  
+}
+
+&__text:hover + &__item{
+  transform: translateY(-40px);
+  transition: transform  $transition-function;
+  border-color:  $white-text;
+
+
+
+@media screen and (min-width:  $min-tablet) {
+  
+    transform: translateY(-40px)
+  
+}
+
+@media screen and (min-width:$min-desktop) {
+  
+    transform: translateY(-50px)
+  
+}
+}
+
+&__button{
+  margin-top: 50px;
+  height: 48px;
+  width: 260px;
+  margin-right: auto;
+  margin-left: auto;
+
+
+@media screen and (min-width:  $min-tablet){
+    margin-top: 31px;
+    height: 48px;
+    width: 260px;
+  
+}
+
+@media screen and (min-width:$min-desktop) {
+    margin-top: 80px;
+    height: 70px;
+    width: 354px;
+}
+}
+&__btn {
+  padding: 16px 10px;
+  width: 100%;
+  background-color: $orange-text;
+    
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1.25;
+  text-transform: uppercase;
+
+  color: $white-text;
+}
+
+}

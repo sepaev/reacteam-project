@@ -5,6 +5,7 @@
 
 @import './utils/variables';
 @import './utils/placeholder';
+@import './utils/mixins';
 
 @import './components/common';
 
@@ -20,6 +21,8 @@
 @import './components/reviews';
 @import './components/contacts';
 @import './components/footer';
+@import './components/menu';
+@import './components/modal';
 
 // Стили для файла с примером HTML-фрагмента
 // @import './example';
