@@ -1,28 +1,85 @@
 .footer{
-    min-width: 320px;
    
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   
+   @media screen and (min-width: $min-tablet ) {
+    flex-direction: row;
+    }
+
+   @media (min-width: $min-desktop) {
+
+   }
+
 }
 
-.footer-logo{
-  padding-top: 26px;
-  height: 30px;
-  width: 85px;
- 
+.logo-field {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+&__item {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 32px;
+
+  color: $dark-text-bg;
 
 }
 
-.footer-logo__item {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 26px;
-    line-height: 1.23;
-    
-    
-    color: $dark-text-bg;
-}
-
-.footer-logo__icon {
+&__link{
+  display: inline-block;
   width: 15px;
   height: 20.5px;
+}
+
+&__text {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 4px;
+  line-height: 5px;
+
+  text-transform: uppercase
+}
+}
+.footer-sociall {
+  margin-top: 20px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ 
+
+
+&__box {
+  display: flex;
+}
+
+&__link {
+  margin-left: 10px;
+ 
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.21;
+
+  color: #111518;
+}
+
+&__item{
+  fill:  $orange-text;
+}
+
+&__icon {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  margin-top: 30px;
+  background-image:  url(../images/Group.svg),  radial-gradient(110.28% 110.28% at 20.5% 87.39%, #FAE100 0%, #FADC04 5.44%, #FBCE0E 11.67%, #FCB720 18.29%, #FE9838 25.14%, #FF7950 30.54%, #FF1C74 49.22%, #6C1CD1 100%);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border-radius: 10px;
+}
 }
