@@ -1,26 +1,25 @@
-.footer{
-   
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   
-   @media screen and (min-width: $min-tablet ) {
+
+ 
+.footer__container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media scree and (max-width: 767px ){
+    flex-direction: column;   
+  }
+  @media scree and (min-width: 768px ) {
     flex-direction: row;
-    }
-
-   @media (min-width: $min-desktop) {
-
-   }
-
+    justify-content: space-between;
+  }
 }
-
 .logo-field {
   
   display: flex;
   flex-direction: column;
   align-items: center;
-
-&__item {
+ 
+&__label{
   font-style: normal;
   font-weight: 800;
   font-size: 26px;
@@ -36,25 +35,28 @@
   height: 20.5px;
 }
 
-&__text {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 4px;
-  line-height: 5px;
+&__item{
+  display: inline-block;
+  background-image: url(../images/helleng.svg);
+  
+  width: 83.85px;
+  height: 6px;
+}
+}
 
-  text-transform: uppercase
-}
-}
 .footer-sociall {
   margin-top: 20px;
    display: flex;
    flex-direction: column;
    align-items: center;
  
+   @media screen and(min-width: $min-tablet){
+     flex-direction: row;
+   }
 
 
 &__box {
-  display: flex;
+  // display: flex;
 }
 
 &__link {
@@ -73,7 +75,7 @@
 }
 
 &__icon {
-  display: flex;
+  // display: flex;
   width: 40px;
   height: 40px;
   margin-top: 30px;
