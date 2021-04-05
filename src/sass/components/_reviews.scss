@@ -1,6 +1,7 @@
 .reviews {
   background-color: $light-bg;
   // background-color: grey;
+
   &__container {
     min-width: $min-flexmobile;
     max-width: $min-mobile;
@@ -50,18 +51,17 @@
       height: 16px;
       border: hidden;
       @media (min-width: 768px) and (max-width: 1279px) {
-        top: 50%;
-        transform: translateY(-50%);
+        top: 230px;
       }
     }
 
     // стрелочки
     &-prev {
-      left: 20px;
+      left: 27px;
       background: url('/images/arrow-left.svg') 0 0 / 100% no-repeat;
     }
     &-next {
-      right: 20px;
+      right: 28px;
       background: url('/images/arrow-right.svg') 0 0 / 100% no-repeat;
     }
   }
@@ -79,13 +79,13 @@
   align-items: flex-start;
   // position: relative;
 
-  @media (min-width: 480px) and (max-width: 767px) {
+  @media (min-width: 480px) {
     width: $min-mobile - 40px;
   }
 
-  @media (min-width: 768px) and (max-width: 1279px) {
-    width: $min-tablet - 55px;
-    max-width: $min-tablet - 55px;
+  @media (min-width: 768px) {
+    width: $min-tablet - 80px;
+    max-width: $min-tablet - 80px;
     padding: 40px;
   }
 
@@ -96,11 +96,20 @@
   }
 
   &__wrapper {
-    @media (min-width: 768px) and (max-width: 1279px) {
-      display: block;
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-areas:
+        'photo revname'
+        'photo education'
+        'photo description'
+        'social description';
+      grid-template-columns: 150px auto;
+      grid-template-rows: 24px 30px 66px auto;
+      // grid-template-columns: 20% 1fr 15%;
+      grid-gap: 20px;
+      min-height: 200px;
+
       float: none;
-      columns: 2;
-      width: 48%;
     }
   }
 
@@ -108,8 +117,9 @@
     width: 90px;
     border-radius: 50%;
     margin: auto;
-    @media (min-width: 768px) and (max-width: 1279px) {
+    @media (min-width: 768px) {
       width: 150px;
+      grid-area: photo;
     }
   }
   &__social-link {
@@ -119,6 +129,9 @@
     height: 70px;
     width: 100%;
     fill: $blue-text;
+    @media (min-width: 768px) {
+      grid-area: social;
+    }
   }
 
   &__name {
@@ -126,7 +139,14 @@
 
     text-align: center;
     color: $orange-text;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
+    @media (min-width: 768px) {
+      grid-area: revname;
+      max-width: 705px;
+      margin: 0;
+      @include font(800, 20px, 24px, 0.08em);
+      text-align: left;
+    }
   }
 
   &__education {
@@ -135,6 +155,12 @@
 
     color: $grey-text;
     margin-bottom: 10px;
+    @media (min-width: 768px) {
+      grid-area: education;
+      max-width: 705px;
+      margin: 0;
+      text-align: left;
+    }
   }
 
   &__description {
@@ -148,22 +174,29 @@
     -webkit-line-clamp: 12;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    @media (min-width: $min-mobile) {
+    @media (min-width: 768px) {
       -webkit-line-clamp: 7;
-      @media (min-width: $min-tablet) {
-        -webkit-line-clamp: 5;
-      }
+      grid-area: description;
+      max-width: 705px;
+      text-align: left;
     }
-    @media (max-width: $min-mobile) {
-      -webkit-line-clamp: 8;
-      @media (max-width: 448px) {
-        -webkit-line-clamp: 9;
-        @media (max-width: 416px) {
-          -webkit-line-clamp: 10;
-          @media (max-width: 384px) {
-            -webkit-line-clamp: 11;
-            @media (max-width: 352px) {
-              -webkit-line-clamp: 12;
+
+    @media (max-width: 767px) {
+      -webkit-line-clamp: 6;
+      @media (max-width: 623px) {
+        -webkit-line-clamp: 7;
+        @media (max-width: 479px) {
+          -webkit-line-clamp: 8;
+          @media (max-width: 448px) {
+            -webkit-line-clamp: 9;
+            @media (max-width: 416px) {
+              -webkit-line-clamp: 10;
+              @media (max-width: 384px) {
+                -webkit-line-clamp: 11;
+                @media (max-width: 352px) {
+                  -webkit-line-clamp: 12;
+                }
+              }
             }
           }
         }
@@ -178,19 +211,36 @@
     display: none;
   }
 
-  &__button {
-    display: block;
-    text-align: center;
-    justify-content: center;
-    min-width: $min-flexmobile - 80px;
-    max-width: $min-mobile - 80px;
-    margin: auto;
+  &__description-full {
+    display: none;
+  }
+  &__read-more--input {
+    display: none;
+    &:checked ~ .reviewer__description-full {
+      display: initial;
+    }
+    &:checked ~ .reviewer__description-short,
+    &:checked ~ .reviewer__read-more--label {
+      display: none;
+    }
+  }
+
+  &__read-more--label {
+    display: inline-block;
+    // text-align: center;
+    // justify-content: center;
+    // min-width: $min-flexmobile - 80px;
+    // max-width: $min-mobile - 80px;
+    // margin: auto;
     color: $orange-text;
     text-decoration: underline;
-    border: hidden;
-    bottom: 0;
+    // border: hidden;
+    // bottom: 0;
     z-index: 20;
     background-color: transparent;
+    @media (min-width: 768px) {
+      grid-area: description;
+    }
   }
 }
 
