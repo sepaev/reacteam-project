@@ -23,6 +23,16 @@
        
     }
 
+    @media (min-width:1280px) {
+        min-width:1280px;
+        width:1280px;
+        max-width: 1375px;
+        min-height: 478px;
+        background-image: url("../images/wave@2x.png");
+        background-size: 1375px 658px cover;
+        background-position: -150px -260px;
+    }
+
     
     &__container {
     min-width: 320px;
@@ -58,17 +68,20 @@
 
     }    
 
-    @media (min-width:769px) and (max-width:1280px) {
-        min-width:769px;
+    @media (min-width:1280px) {
+        min-width:1280px;
+        max-width: 1375px;
+        min-height: 616px;
         width:1280px;
-        padding: 0 30px 100px 30px;
+        padding-left:130px;
+        padding-right:30px;
         display:flex;
         flex-direction: column;
         justify-content: left;
         background-image: url("../images/mobile-hero@2x.png"), url("../images/mobile-hero-gradient@2x.png");
         background-repeat: no-repeat;
-        background-size: 719px 718px, 841px 602px;
-        background-position:410px 13px, 374px 29px;
+        background-size: 539px 538px, 630px 453px;
+        background-position:700px 38px, 635px 65px;
     }
 
     @media (min-width:1281px) {
@@ -83,7 +96,6 @@
     &__set  {
     
     
-
         @media (min-width:768px) {
             width:332px;
             display:block;
@@ -92,9 +104,9 @@
             justify-content: left;
         }
 
-        @media (min-width:769px) and (max-width:1280px) {
+        @media (min-width:1280px) {
             
-            width:1280px;
+            width: 750px;
             padding-right: 90px;
 
         }
@@ -112,7 +124,7 @@
             padding-right:90px;
         }
 
-        @media (min-width:769px) and (max-width:1280px) {
+        @media (min-width:1280px) {
             
             font-weight: 800;
             font-size: 48px;
@@ -137,7 +149,8 @@
         line-height: 22px;
         letter-spacing: 0.08em;
 
-        @media (min-width:769px) and (max-width:1280px) {
+        @media (min-width:1280px) {
+            
             font-size: 18px;
             line-height: 33px;
         }
@@ -159,7 +172,8 @@
             padding-right:45px;
         }
 
-        @media (min-width:769px) and (max-width:1280px) {
+        @media (min-width:1280px) {
+           
             font-size: 18px;
             line-height: 33px;
         }
@@ -182,7 +196,7 @@
 
         }
 
-        @media (min-width:769px) and (max-width:1280px) {
+        @media (min-width:1280px) {
             font-size: 18px;
             line-height: 33px;   
         }
@@ -214,7 +228,7 @@
             margin:30px 10px 90px 0px;
         }
 
-        @media (min-width:769px) and (max-width:1280px) {
+        @media (min-width:1280px) {
             align-items: left;
             margin:40px 10px 40px 0px;
             padding: 27px 25px 26px 25px;
