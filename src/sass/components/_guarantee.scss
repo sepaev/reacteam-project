@@ -1,15 +1,24 @@
-.guarantee{
+.guarantee {
     &__container {
-        @media screen and (min-width: 768px){
-            max-width: 768px;
+        max-width: 480px;
+        min-width: 320px;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+      
+        @media screen and (min-width: 768px) {
+            min-width: 768px;
             padding: 0 40px 50px;
-        }        
+        }
+      
         @media screen and (min-width: 1280px) {
-            max-width: calc(1314px + 183px * 2);
-            padding: 0 183px;
+            min-width: 1280px;
+            max-width: 1375px;
+            padding: 0 30px 130px;
         }
     }
-
+    
     &__box {
         background-color: $grey-bg;
         position: relative;
