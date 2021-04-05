@@ -1,20 +1,25 @@
 .about {
     &__container {
-        color: $dark-text-bg;
-        @media screen and (max-width: 767px) {
-            padding: 0 20px 50px;
-
-        }
+        max-width: 480px;
+        min-width: 320px;
+        padding: 0 20px;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+      
         @media screen and (min-width: 768px) {
-            padding: 0 40px 50px;
-            max-width: 768px;
-        }        
+            min-width: 768px;
+          padding: 0 40px 50px;
+        }
+      
         @media screen and (min-width: 1280px) {
-            max-width: calc(180px + 1205px);
-            padding: 0 0 130px 180px;
+            min-width: 1280px;
+            max-width: 1375px;
+            padding: 0 30px 130px;
         }
     }
-
+    
     &__title {
         font-weight: 800;
         font-size: 20px;
