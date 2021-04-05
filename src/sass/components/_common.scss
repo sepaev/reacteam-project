@@ -46,12 +46,14 @@ p {
   margin-right: auto;
 
   @media (min-width: $min-tablet) {
-    max-width: 768px;
-    padding: 40px 20px;
+    width: 768px;
+    padding: 0 40px 50px;
   }
 
   @media (min-width: $min-desktop) {
-    max-width: 1280px;
+    min-width: 1280px;
+    max-width: 1375px;
+    padding: 0 30px 130px;
   }
 }
 
