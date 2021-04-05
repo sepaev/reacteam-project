@@ -1,6 +1,7 @@
 
 .hero {
     min-width: 320px;
+    max-width: 480px;
     min-height: 518px;
     padding: 0;
     margin:0;
@@ -9,53 +10,50 @@
     background-repeat: no-repeat;
     // box-shadow:-5px 21px 26px $shadow40;
     background-size: 768px 618px cover;
-    background-position: -50px -45px;
+    background-position: -50px -5px;
 
-    @media (min-width:481px) and (max-width:768px) {
+    @media (min-width:768px) {
         min-height: 459px;
+        max-width:1279px;
         min-width: 481px;
         width:768px;
-        background-position: 0px -155px;
+        background-image: url("../images/wave.png");
+        background-repeat: no-repeat;
+        background-position: 0px -120px;
+       
     }
 
     
     &__container {
     min-width: 320px;
-    min-height: 468px;
-    padding: 0 20px 47px 20px;
-    position: relative;
+    width: 320px;
+    min-height: 555px;
+    padding-top: 50px;
+    padding-left:20px;
+    padding-right:20px;
     margin:auto;
-    // background-color: $white-text;
-    // background-image: url("../images/mobile-hero.png"), url("../images/mobile-hero-gradient.png");
-    // background-repeat: no-repeat;
-    
-    // background-size: 177px 177px, 208px 148px;
-    // background-position:50% 288px, 50% 295px;
-
-    
+    text-align: left;
     background-color: transparent;
     background-image: url("../images/mobile-hero.png"), url("../images/mobile-hero-gradient.png");
     background-repeat: no-repeat;
-    // box-shadow:-5px 21px 26px $shadow40;
     background-size: 177px 177px, 208px 148px;
-    background-position:50% 288px, 50% 295px;
+    background-position:50% 330px, 50% 338.5px;
 
 
     
-    @media (min-width:481px) and (max-width:768px) {
+    @media (min-width:768px) {
         min-width: 481px;
         width:768px;
         min-height: 0;
-        padding-left:42px;
-        padding-right: 36px;
-        padding-bottom:0;
+        padding-left:40px;
+        padding-right:40px;
         display:flex;
         flex-direction: column;
         justify-content: left;
         background-image: url("../images/mobile-hero@2x.png"), url("../images/mobile-hero-gradient@2x.png");
         background-repeat: no-repeat;
         background-size: 321px 320px, 375px 268px;
-        background-position:410px 13px, 374px 29px;
+        background-position:415px 63px, 379px 79px;
         
 
     }    
@@ -86,7 +84,7 @@
     
     
 
-        @media (min-width:481px) and (max-width:768px) {
+        @media (min-width:768px) {
             width:332px;
             display:block;
             // display:flex;
@@ -110,7 +108,7 @@
         line-height: 27px;
         letter-spacing: 0.03em;
 
-        @media (min-width:481px) and (max-width:768px) {
+        @media (min-width:768px) {
             padding-right:90px;
         }
 
@@ -157,7 +155,7 @@
         line-height: 22px;
         letter-spacing: 0.08em;
 
-        @media (min-width:481px) and (max-width:768px) {
+        @media (min-width:768px) {
             padding-right:45px;
         }
 
@@ -180,7 +178,7 @@
         line-height: 22px;
         letter-spacing: 0.08em;
 
-        @media (min-width:481px) and (max-width:768px) {
+        @media (min-width:768px) {
 
         }
 
@@ -211,7 +209,7 @@
         text-transform: uppercase;
         cursor:pointer;
 
-        @media (min-width:481px) and (max-width:768px) {
+        @media (min-width:768px) {
             align-items: left;
             margin:30px 10px 90px 0px;
         }
