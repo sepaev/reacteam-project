@@ -22,9 +22,16 @@ $(document).ready(function(){
       {
         breakpoint: 768,
         settings: {
+          slidesToShow: 7,
+          slidesPerRow: 7
+        }
+      },
+         {
+        breakpoint: 1280,
+        settings: {
         slidesToShow: 3,
         slidesPerRow: 3
-        }
+        } 
       }
     ]
   });
