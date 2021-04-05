@@ -1,7 +1,20 @@
 .menu {
+  &__box {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  width: 100ch;
+  position: relative;
+  max-width: 440px;
+
+  @media (min-width: $min-tablet) {
+    max-width: 690px;
+  }
+}
+  
   &__container {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     padding: 30px 20px 0px 20px;
     content: '';
 
@@ -12,7 +25,8 @@
     height: 100vh;
 
     background-color: $modal-bg;
-    z-index: 3;
+    z-index: 1050;
+
     transform: translateY(-100%);
 
     opacity: 0;
@@ -39,8 +53,9 @@
     justify-content: center;
 
     position: absolute;
-    top: 30px;
-    right: 15px;
+
+    top: 0px;
+    right: -5px;
 
     width: 30px;
     height: 30px;
@@ -48,8 +63,7 @@
     padding: 0px;
 
     @media (min-width: $min-tablet) {
-      top: 50px;
-      right: 35px;
+      top: 5px;
     }
 
     border-radius: none;
@@ -65,10 +79,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 60px;
     color: $white-text;
     font-weight: 700;
     font-size: 12px;
+
+    @media (max-width: 767px) {
+      width: 65px;
+    }
 
     @media (min-width: $min-tablet) {
       font-weight: 800;
@@ -82,13 +99,15 @@
   &__name {
     display: flex;
     text-transform: uppercase;
+    justify-content: space-between;
+    width: 65px;
+
     color: $white-text;
     font-size: 5px;
     margin-top: 3px;
     margin-bottom: 0px;
 
     @media (min-width: $min-tablet) {
-      justify-content: space-between;
       width: 115px;
       margin-top: 0px;
       font-size: 8px;
@@ -135,6 +154,11 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+
+    @media (max-width: 767px) {
+      width: 65px;
+    }
+
   }
 
   &__icon {
