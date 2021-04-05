@@ -8,7 +8,6 @@
     background-color: $white-text;
     background-image: url("../images/wave.png");
     background-repeat: no-repeat;
-    // box-shadow:-5px 21px 26px $shadow40;
     background-size: 768px 618px cover;
     background-position: -50px -5px;
 
@@ -20,7 +19,6 @@
         background-image: url("../images/wave.png");
         background-repeat: no-repeat;
         background-position: 0px -105px;
-       
     }
 
     @media (min-width:1280px) {
@@ -57,8 +55,6 @@
     background-repeat: no-repeat;
     background-size: 177px 177px, 208px 148px;
     background-position:50% 330px, 50% 338.5px;
-
-
     
     @media (min-width:768px) {
         min-width: 481px;
@@ -73,8 +69,6 @@
         background-repeat: no-repeat;
         background-size: 321px 320px, 375px 268px;
         background-position:415px 60px, 379px 76px;
-        
-
     }    
 
     @media (min-width:1280px) {
@@ -113,7 +107,6 @@
     
     &__set  {
     
-    
         @media (min-width:768px) {
             width:332px;
             display:block;
@@ -123,10 +116,8 @@
         }
 
         @media (min-width:1280px) {
-            
             width: 700px;
             padding-right: 90px;
-
         }
 
         @media (min-width:1376px) and (max-width:1688px) {
@@ -150,12 +141,10 @@
         }
 
         @media (min-width:1280px) {
-            
             font-weight: 800;
             font-size: 48px;
             line-height: 60px;
             letter-spacing: 0.03em;
-
         }
 
         @media (min-width:1376px) and (max-width:1688px) {
@@ -175,7 +164,6 @@
         letter-spacing: 0.08em;
 
         @media (min-width:1280px) {
-            
             font-size: 18px;
             line-height: 33px;
         }
@@ -207,7 +195,6 @@
             font-size: 20px;
             line-height: 33px;
         }
-
     }
 
     &__item {
@@ -217,10 +204,6 @@
         font-size: 14px;
         line-height: 22px;
         letter-spacing: 0.08em;
-
-        @media (min-width:768px) {
-
-        }
 
         @media (min-width:1280px) {
             font-size: 18px;
@@ -232,7 +215,6 @@
             line-height: 33px;
         }
     }
-
 
     &__btn {
         margin:30px 10px 30px 10px;
@@ -263,7 +245,6 @@
             font-size: 14px;
             line-height: 17px;
             letter-spacing: 0.14em;
-            
         }
 
         @media (min-width:1376px) and (max-width:1688px) {
@@ -278,76 +259,6 @@
 
     }
 
-    // &__bg {
-    //     overflow: hidden;
-    //     min-width:320px;
-    //     width:768px;
-    //     height: 520px;
-    //     object-fit: cover;
-    //     @media (min-width:481px) and (max-width:768px) {
-            
-    //     }
-    // }
-
-    // &__img {
-        
-        
-    //     width:100%;
-    //     height: 100%;
-    //     // position: absolute;
-    //     // top:-48px;
-    //     // left:-54px;
-    //     display: block;
-    //     box-shadow:-5px 21px 26px $shadow40;
-        
-        
-
-    //     // @media (min-width:481px) and (max-width:768px){
-    //     //     width:375px;
-    //     //     height:321px;
-    //     //     margin-top: 10px;
-    //     // }
-
-    //     // @media (min-width:769px) and (max-width:1280px) {
-    //     //     width:661px;
-    //     //     height:548px;
-    //     //     margin:0;
-    //     //     margin-right: 40px;
-    //     //     align-self: right;
-    //     // }
-
-    //     // @media (min-width:1281px) {
-    //     //     width:841px;
-    //     //     height:718px;
-    //     //     margin:0;
-    //     //     margin-right: 40px;
-    //     //     align-self: right;
-    //     // }
-    // }
-
-    // &__gradient {
-    //     width:208px;
-    //     height:148px;
-    //     position:absolute;
-    //     top:10px;
-    //     left:31px;
-        
-
-    //     @media (min-width:481px) and (max-width:768px) {
-    //         width:375px;
-    //         height:269px;
-    //         top:27px;
-    //         left:-8.5px;
-            
-    //     }
-
-    //     @media (min-width:769px) and (max-width:1280px) {
-    //         width:607px;
-    //         height: 338px;
-    //         top: 37px;
-    //         left:620px;
-    //     }
-    // }
 }
 
 
