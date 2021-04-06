@@ -1,6 +1,13 @@
 .reviews {
+  margin: auto;
   background-color: $light-bg;
-  // background-color: grey;
+  @media (min-width: 1280px) {
+    min-width: 1220px;
+    max-width: 1314px;
+    width: 100%;
+    padding-left: 27px;
+    padding-right: 29px;
+  }
 
   &__container {
     min-width: $min-flexmobile;
@@ -20,7 +27,9 @@
     @media (min-width: 1280px) {
       min-width: 1220px;
       max-width: 1258px;
-      width: auto;
+      width: 100%;
+      padding-left: 60px;
+      padding-right: 60px;
     }
   }
 
@@ -29,6 +38,15 @@
     text-align: center;
     color: $dark-text-bg;
     margin-bottom: 20px;
+
+    @media (min-width: 768px) and (max-width: 1279px) {
+      @include font(800, 26px, 33.8px, 0.03em);
+    }
+
+    @media (min-width: 1280px) {
+      @include font(800, 46px, 59.8px, 0.03em);
+      max-width: 1090px;
+    }
   }
 
   // стили для slick слайдера
@@ -52,6 +70,9 @@
       border: hidden;
       @media (min-width: 768px) and (max-width: 1279px) {
         top: 230px;
+      }
+      @media (min-width: 1280px) {
+        top: 260px;
       }
     }
 
@@ -87,12 +108,14 @@
     width: $min-tablet - 80px;
     max-width: $min-tablet - 80px;
     padding: 40px;
+    box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+    margin: 0;
   }
 
   @media (min-width: 1280px) {
-    min-width: 1220px;
-    max-width: 1258px;
-    width: auto;
+    max-width: 1090px;
+    width: 100%;
+    padding: 50px 112px 51px 82px;
   }
 
   &__wrapper {
@@ -111,6 +134,12 @@
 
       float: none;
     }
+
+    @media (min-width: 1280px) {
+      grid-gap: 10px;
+      grid-template-columns: 160px auto;
+      grid-template-rows: 37px 44px 66px auto;
+    }
   }
 
   &__picture {
@@ -120,6 +149,9 @@
     @media (min-width: 768px) {
       width: 150px;
       grid-area: photo;
+    }
+    @media (min-width: 1280px) {
+      margin: 0 10px 10px 0;
     }
   }
   &__social-link {
@@ -131,6 +163,13 @@
     fill: $blue-text;
     @media (min-width: 768px) {
       grid-area: social;
+      display: block;
+    }
+  }
+  &__social-icon {
+    @media (min-width: 768px) {
+      width: 30px;
+      height: 30px;
     }
   }
 
@@ -147,6 +186,9 @@
       @include font(800, 20px, 24px, 0.08em);
       text-align: left;
     }
+    @media (min-width: 1280px) {
+      @include font(800, 30px, 36.57px, 0.08em);
+    }
   }
 
   &__education {
@@ -160,6 +202,9 @@
       max-width: 705px;
       margin: 0;
       text-align: left;
+    }
+    @media (min-width: 1280px) {
+      @include font(500, 14px, 17.07px, 0.08em);
     }
   }
 
@@ -179,6 +224,9 @@
       grid-area: description;
       max-width: 705px;
       text-align: left;
+    }
+    @media (min-width: 1280px) {
+      @include font(500, 18px, 28px, 0em);
     }
 
     @media (max-width: 767px) {
@@ -227,15 +275,8 @@
 
   &__read-more--label {
     display: inline-block;
-    // text-align: center;
-    // justify-content: center;
-    // min-width: $min-flexmobile - 80px;
-    // max-width: $min-mobile - 80px;
-    // margin: auto;
     color: $orange-text;
     text-decoration: underline;
-    // border: hidden;
-    // bottom: 0;
     z-index: 20;
     background-color: transparent;
     @media (min-width: 768px) {
@@ -246,12 +287,19 @@
 
 .reviewers {
   padding: 20px 30px 0;
+  max-width: 1090px;
+  @media (min-width: 768px) {
+    padding-top: 30px;
+  }
+  @media (min-width: 768px) {
+    padding-top: 40px;
+  }
   &__set {
     width: 182px;
     display: flex;
     margin: 0 auto;
 
-    @media (min-width: 768px) and (max-width: 1279px) {
+    @media (min-width: 768px) {
       width: 588px;
     }
   }
@@ -260,7 +308,7 @@
     height: 54px;
     margin: 0 5px;
     text-align: center;
-    @media (min-width: 768px) and (max-width: 1279px) {
+    @media (min-width: 768px) {
       margin: 0 15px;
     }
   }
