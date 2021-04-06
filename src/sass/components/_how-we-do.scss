@@ -1,35 +1,25 @@
-//-секция work__we-do-//
+// --work-- //
 
-<<<<<<< Updated upstream
-.work__container {
-  max-width: 480px;
-  //   min-width: 320px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+.work {
+  background-color: $white-text;
 
-  @media (min-width: 767px) {
-    max-width: 768px;
-  }
+  &__container {
+    max-width: 480px;
 
-  @media screen and (min-width: 1280px) {
-    .about__container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: 767px) {
+      max-width: 768px;
+    }
+
+    @media screen and (min-width: 1280px) {
       min-width: 1280px;
       max-width: 1375px;
     }
   }
-
-  //   @media (min-width: 1279px) {
-  //     max-width: 1280px;
-  //   }
-}
-
-=======
->>>>>>> Stashed changes
-.work {
-  background-color: $white-text;
-  padding-bottom: 130px;
 
   &__title {
     font-family: Montserrat;
@@ -89,9 +79,37 @@
     }
   }
 
+  &__item:hover,
+  &__item:focus {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    background-color: $orange-text;
+    transform: $transition-function;
+
+    .work__text {
+      color: $white-text;
+    }
+
+    .work__paragraph {
+      color: $white-text;
+    }
+
+    .work__paragraph::before {
+      background-color: white;
+    }
+
+    .work__thumb--svg {
+      fill: white;
+    }
+
+    .work__element {
+      color: $white-text;
+    }
+  }
+
   &__card {
     position: relative;
-    padding: 15px 15px;
+    padding: 30px 30px;
   }
 
   &__element {
@@ -111,14 +129,14 @@
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 19px;
     line-height: 28px;
 
     text-align: center;
     letter-spacing: 0.08em;
 
     color: $dark-text-bg;
-    padding-left: 15px;
+    text-align: center;
     padding-bottom: 32px;
   }
 
@@ -161,37 +179,6 @@
 
     padding-top: 39px;
     padding-bottom: 39px;
+    fill: $orange-text;
   }
-}
-
-.work__item:hover,
-.work__item:focus {
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  background-color: $orange-text;
-  transform: $transition-function;
-
-  .work__text {
-    color: $white-text;
-  }
-
-  .work__paragraph {
-    color: $white-text;
-  }
-
-  .work__paragraph::before {
-    background-color: white;
-  }
-
-  .work__thumb--svg {
-    fill: white;
-  }
-
-  .work__element {
-    color: $white-text;
-  }
-}
-
-.work__thumb--svg {
-  fill: $orange-text;
 }
