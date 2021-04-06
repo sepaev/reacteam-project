@@ -1,32 +1,5 @@
 //-секция work__we-do-//
 
-<<<<<<< Updated upstream
-.work__container {
-  max-width: 480px;
-  //   min-width: 320px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-
-  @media (min-width: 767px) {
-    max-width: 768px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    .about__container {
-      min-width: 1280px;
-      max-width: 1375px;
-    }
-  }
-
-  //   @media (min-width: 1279px) {
-  //     max-width: 1280px;
-  //   }
-}
-
-=======
->>>>>>> Stashed changes
 .work {
   background-color: $white-text;
   padding-bottom: 130px;
