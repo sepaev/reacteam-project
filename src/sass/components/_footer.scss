@@ -1,10 +1,11 @@
 
  
 .footer__container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
+  min-width: 320px;
+ 
+  position: relative;
+  
+  
   @media scree and (max-width: 767px ){
     flex-direction: column;   
   }
@@ -14,50 +15,67 @@
   }
 }
 .logo-field {
-  
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-left: 118px;
  
+&__box--flex {
+  display: flex;
+
+}
+
 &__label{
+  
   font-style: normal;
   font-weight: 800;
   font-size: 26px;
-  line-height: 32px;
+  line-height: 1.26;
 
   color: $dark-text-bg;
 
 }
 
 &__link{
-  display: inline-block;
+
+  
   width: 15px;
   height: 20.5px;
 }
 
 &__item{
-  display: inline-block;
-  background-image: url(../images/helleng.svg);
   
-  width: 83.85px;
-  height: 6px;
+  // background-image: url(../images/helleng.svg);
+  
+ 
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 8px;
+  line-height: 10px;
+  
+  
+  
+  text-transform: uppercase;
+
+
+
+color: $dark-text-bg;
+
 }
 }
 
-.footer-sociall {
-  margin-top: 20px;
+.footer-sociall { 
+  
+   margin-top: 20px;
    display: flex;
-   flex-direction: column;
-   align-items: center;
+  
+   margin-left: 60px;
  
    @media screen and(min-width: $min-tablet){
      flex-direction: row;
    }
 
 
-&__box {
-  // display: flex;
-}
+
+
 
 &__link {
   margin-left: 10px;
@@ -75,7 +93,9 @@
 }
 
 &__icon {
-  // display: flex;
+  
+  position: absolute;
+  
   width: 40px;
   height: 40px;
   margin-top: 30px;
@@ -83,5 +103,9 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
   border-radius: 10px;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%);
+  margin-bottom: 30px;
 }
 }
