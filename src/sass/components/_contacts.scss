@@ -1,18 +1,21 @@
 
 
   .contacts {
-     padding-top: 50px; 
-     min-width: 320px;
     
+    padding-top: 50px;
+    @media screen and (min-width:$min-desktop){
+      padding-top: 100px;
+    }
      
      height: 520px;
      @media screen and (min-width:$min-desktop) {
       height: 840px;
     }
 }
- 
-.contact-overlay{
+
+.contacts__overlay{
   @media screen and (max-width: 479px) {
+
     height: 520px;
   background-image:  linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(../images/contact-mobile.jpg);
 
@@ -76,7 +79,23 @@
 }
 }
 
-.contacts-field{
+.contacts__container{
+  @media screen and (max-width: 479px) {
+
+  min-width: 320px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+ 
+@media screen and (min-width:$min-desktop) {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+}
+
+.contacts{
 
   &__title {
     padding-left: 20px;
@@ -291,7 +310,7 @@
   padding-left: 28px;
   padding-right: 28px;
   background-color: transparent;
-  border: 1px solid $white-color;
+  border: 1px solid #ffffff;
   
   
   
