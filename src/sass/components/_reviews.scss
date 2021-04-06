@@ -1,10 +1,27 @@
 .reviews {
   background-color: $light-bg;
   // background-color: grey;
+
   &__container {
-    min-width: 320px;
-    max-width: 480px;
+    min-width: $min-flexmobile;
+    max-width: $min-mobile;
     width: auto;
+    position: relative;
+
+    @media (min-width: 480px) and (max-width: 767px) {
+      width: $min-mobile;
+    }
+
+    @media (min-width: 768px) and (max-width: 1279px) {
+      width: $min-tablet;
+      max-width: $min-tablet;
+    }
+
+    @media (min-width: 1280px) {
+      min-width: 1220px;
+      max-width: 1258px;
+      width: auto;
+    }
   }
 
   &__title {
@@ -21,80 +38,89 @@
       display: flex;
     }
 
-    &-slider {
-      position: relative;
-      min-width: 0;
-    }
-
     &-list {
       overflow: hidden;
     }
 
     &-arrow {
       position: absolute;
-      bottom: -50px;
+      bottom: 69px;
       z-index: 10;
       font-size: 0;
       width: 27px;
       height: 16px;
       border: hidden;
+      @media (min-width: 768px) and (max-width: 1279px) {
+        top: 230px;
+      }
     }
-
-    // &-dots {
-    //   display: flex;
-    //   justify-content: center;
-    //   font-size: 0;
-    //   margin: 5px;
-    // }
-    // &-dots li {
-    //   width: 54px;
-    //   height: 54px;
-    //   margin: 5px;
-    // }
-    // &-dots button {
-    //   width: 100%;
-    //   height: 100%;
-    //   border-radius: 50%;
-    //   background: url('../images/reviews-photo1.jpg') 0 0 / 100% no-repeat;
-    //   // background-image: url('../images/reviews-photo1.jpg');
-    // }
-    // &-dots li.slick-active button {
-    //   border-color: red;
-    // }
 
     // стрелочки
     &-prev {
-      left: 20px;
+      left: 27px;
       background: url('/images/arrow-left.svg') 0 0 / 100% no-repeat;
     }
     &-next {
-      right: 20px;
+      right: 28px;
       background: url('/images/arrow-right.svg') 0 0 / 100% no-repeat;
     }
   }
 }
 
 .reviewer {
-  min-width: 280px;
-  max-width: 440px;
+  min-width: $min-flexmobile - 40px;
+  max-width: $min-mobile - 40px;
   width: 100%;
-  min-height: 568px;
   display: block;
   text-align: center;
   background: $white-color;
   padding: 20px;
   padding-bottom: 30px;
   align-items: flex-start;
+  // position: relative;
 
-  &__item {
-    // width: 280px;
-    margin: 0 5px;
+  @media (min-width: 480px) {
+    width: $min-mobile - 40px;
+  }
+
+  @media (min-width: 768px) {
+    width: $min-tablet - 80px;
+    max-width: $min-tablet - 80px;
+    padding: 40px;
+  }
+
+  @media (min-width: 1280px) {
+    min-width: 1220px;
+    max-width: 1258px;
+    width: auto;
+  }
+
+  &__wrapper {
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-areas:
+        'photo revname'
+        'photo education'
+        'photo description'
+        'social description';
+      grid-template-columns: 150px auto;
+      grid-template-rows: 24px 30px 66px auto;
+      // grid-template-columns: 20% 1fr 15%;
+      grid-gap: 20px;
+      min-height: 200px;
+
+      float: none;
+    }
   }
 
   &__picture {
     width: 90px;
     border-radius: 50%;
     margin: auto;
+    @media (min-width: 768px) {
+      width: 150px;
+      grid-area: photo;
+    }
   }
   &__social-link {
     display: flex;
@@ -103,6 +129,9 @@
     height: 70px;
     width: 100%;
     fill: $blue-text;
+    @media (min-width: 768px) {
+      grid-area: social;
+    }
   }
 
   &__name {
@@ -110,7 +139,14 @@
 
     text-align: center;
     color: $orange-text;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
+    @media (min-width: 768px) {
+      grid-area: revname;
+      max-width: 705px;
+      margin: 0;
+      @include font(800, 20px, 24px, 0.08em);
+      text-align: left;
+    }
   }
 
   &__education {
@@ -119,7 +155,14 @@
 
     color: $grey-text;
     margin-bottom: 10px;
+    @media (min-width: 768px) {
+      grid-area: education;
+      max-width: 705px;
+      margin: 0;
+      text-align: left;
+    }
   }
+
   &__description {
     @include font(500, 12px, 20px, 0em);
     text-align: center;
@@ -128,57 +171,109 @@
     min-height: 100px;
 
     display: -webkit-box;
-    -webkit-line-clamp: 10;
+    -webkit-line-clamp: 12;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    @media (min-width: 768px) {
+      -webkit-line-clamp: 7;
+      grid-area: description;
+      max-width: 705px;
+      text-align: left;
+    }
+
+    @media (max-width: 767px) {
+      -webkit-line-clamp: 6;
+      @media (max-width: 623px) {
+        -webkit-line-clamp: 7;
+        @media (max-width: 479px) {
+          -webkit-line-clamp: 8;
+          @media (max-width: 448px) {
+            -webkit-line-clamp: 9;
+            @media (max-width: 416px) {
+              -webkit-line-clamp: 10;
+              @media (max-width: 384px) {
+                -webkit-line-clamp: 11;
+                @media (max-width: 352px) {
+                  -webkit-line-clamp: 12;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
   &__description:hover {
     -webkit-line-clamp: 100;
   }
+
   &__description:hover + &__button {
     display: none;
   }
-  // &__description--open {
-  //   overflow: visible;
-  // }
-  &__button {
-    display: block;
-    text-align: center;
-    justify-content: center;
-    min-width: 240px;
-    max-width: 400px;
-    margin: auto;
+
+  &__description-full {
+    display: none;
+  }
+  &__read-more--input {
+    display: none;
+    &:checked ~ .reviewer__description-full {
+      display: initial;
+    }
+    &:checked ~ .reviewer__description-short,
+    &:checked ~ .reviewer__read-more--label {
+      display: none;
+    }
+  }
+
+  &__read-more--label {
+    display: inline-block;
+    // text-align: center;
+    // justify-content: center;
+    // min-width: $min-flexmobile - 80px;
+    // max-width: $min-mobile - 80px;
+    // margin: auto;
     color: $orange-text;
     text-decoration: underline;
-    border: hidden;
-    // position: absolute;
-    bottom: 0;
+    // border: hidden;
+    // bottom: 0;
     z-index: 20;
     background-color: transparent;
-    // transform: translateX(30%);
+    @media (min-width: 768px) {
+      grid-area: description;
+    }
   }
 }
 
 .reviewers {
-  // display: flex;
-  padding: 20px 30px 50px;
+  padding: 20px 30px 0;
   &__set {
     width: 182px;
     display: flex;
     margin: 0 auto;
+
+    @media (min-width: 768px) and (max-width: 1279px) {
+      width: 588px;
+    }
   }
   &__item {
     width: 54px;
     height: 54px;
     margin: 0 5px;
     text-align: center;
-    // border-radius: 50%;
-  }
-  &__personal-link {
-    // border-radius: 50%;
+    @media (min-width: 768px) and (max-width: 1279px) {
+      margin: 0 15px;
+    }
   }
   &__picture {
     border-radius: 50%;
+  }
+
+  & .slick {
+    &-current .reviewers__picture {
+      @media (min-width: 768px) {
+        border: 1px solid $orange-color;
+      }
+    }
   }
 }
 * {
