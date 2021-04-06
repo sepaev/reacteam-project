@@ -3,7 +3,26 @@
 .work {
   background-color: $white-text;
   padding-bottom: 130px;
+  
+  &__container {
+  max-width: 480px;
+    padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 
+  @media (min-width: 767px) {
+    max-width: 768px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    .about__container {
+      min-width: 1280px;
+      max-width: 1375px;
+    }
+  }
+
+  }
   &__title {
     font-family: Montserrat;
     font-style: normal;
