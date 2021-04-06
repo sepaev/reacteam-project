@@ -80,6 +80,7 @@
     @media (max-width: $min-desktop){
         padding-left: 20px;
         border-left: 2px solid;
+        
     }
 
     @media (max-width: $min-tablet) {
@@ -101,6 +102,7 @@
 
 .program__item {
     text-align: start;
+    
     @media (min-width: $min-desktop){
         width: 240px;
     }
@@ -252,5 +254,31 @@
         margin-right: 30px;
         width: 176px;
     }
+    }
+}
+
+.border__pos {
+    position: relative;
+    @media (max-width: $min-desktop) {
+        
+        
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 10px;
+            height: 70px;
+            border-left: 4px solid $program-bg;
+            // border-color: red;
+            left: -53px;
+            bottom: -4px;
+
+            @media (max-width: $min-tablet) {
+                left: -23px;
+                bottom: -1px;
+            }
+
+        }
+        
     }
 }
