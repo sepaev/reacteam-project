@@ -1,10 +1,15 @@
-
+.footer {
+  padding-top: 30px;
+}
  
 .footer__container{
   min-width: 320px;
- 
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
-  
+  padding-top: 0px;
   
   @media scree and (max-width: 767px ){
     flex-direction: column;   
@@ -14,13 +19,9 @@
     justify-content: space-between;
   }
 }
-.logo-field {
-  margin-left: 118px;
- 
-&__box--flex {
-  display: flex;
 
-}
+.footer-logo {
+  text-align: center;
 
 &__label{
   
@@ -65,12 +66,12 @@ color: $dark-text-bg;
 .footer-sociall { 
   
    margin-top: 20px;
-   display: flex;
+   text-align: center;
   
-   margin-left: 60px;
+   
  
    @media screen and(min-width: $min-tablet){
-     flex-direction: row;
+     
    }
 
 
