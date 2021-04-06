@@ -1,10 +1,9 @@
-
 .hero {
     min-width: 320px;
     max-width: 480px;
-    min-height: 518px;
+    min-height: 575px;
     padding: 0;
-    margin:0;
+    margin:auto;
     background-color: $white-text;
     background-image: url("../images/wave.png");
     background-repeat: no-repeat;
@@ -12,7 +11,7 @@
     background-position: -50px -5px;
 
     @media (min-width:768px) {
-        min-height: 459px;
+        min-height: 500px;
         max-width:1279px;
         min-width: 481px;
         width:768px;
@@ -107,22 +106,22 @@
     
     &__set  {
     
+
         @media (min-width:768px) {
-            width:332px;
             display:block;
             // display:flex;
             // flex-direction: column;
             justify-content: left;
+            padding-right: 380px;
         }
 
         @media (min-width:1280px) {
-            width: 700px;
-            padding-right: 90px;
+            padding-right: 600px;
         }
 
         @media (min-width:1376px) and (max-width:1688px) {
             margin-top: 79px;
-            width: 850px;
+            padding-right: 700px;
         }
     }
 
@@ -176,22 +175,20 @@
 
     &__article {
         color:$dark-text-bg;
+        margin-bottom: 30px;
         font-weight: 700;
         font-size: 14px;
         line-height: 22px;
         letter-spacing: 0.08em;
 
-        @media (min-width:768px) {
-            padding-right:45px;
-        }
-
         @media (min-width:1280px) {
-           
+            margin-bottom: 40px;
             font-size: 18px;
             line-height: 33px;
         }
 
         @media (min-width:1376px) and (max-width:1688px) {
+            margin-bottom: 40px;
             font-size: 20px;
             line-height: 33px;
         }
@@ -217,7 +214,7 @@
     }
 
     &__btn {
-        margin:30px 10px 30px 10px;
+        margin:0 10px 30px 10px;
         padding: 14px 9px 14px 9px;
         color:$white-text;
         background-color:$orange-text;
@@ -234,12 +231,12 @@
 
         @media (min-width:768px) {
             align-items: left;
-            margin:30px 10px 90px 0px;
+            margin:0 10px 90px 0px;
         }
 
         @media (min-width:1280px) {
             align-items: left;
-            margin:40px 10px 40px 0px;
+            margin:0 10px 40px 0px;
             padding: 27px 25px 26px 25px;
             font-weight: bold;
             font-size: 14px;
@@ -249,7 +246,7 @@
 
         @media (min-width:1376px) and (max-width:1688px) {
             align-items: left;
-            margin:40px 10px 40px 0px;
+            margin:0 10px 40px 0px;
             padding: 27px 25px 26px 25px;
             font-weight: bold;
             font-size: 14px;
@@ -260,5 +257,3 @@
     }
 
 }
-
-
