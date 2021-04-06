@@ -1,55 +1,11 @@
-<<<<<<< Updated upstream
-//--секция-problems//
-
-.problems__container {
-  max-width: 480px;
-
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: initial;
-
-  @media (min-width: 767px) {
-    max-width: 768px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    .about__container {
-      min-width: 1280px;
-      max-width: 1375px;
-    }
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .problems {
-    background: url(/images/Campfire.svg), linear-gradient(180deg, #111518 72%, #fff 0);
-=======
 @media screen and (min-width: 1280px) {
   .problems {
     background: linear-gradient(180deg, #111518 72%, #fff 0);
->>>>>>> Stashed changes
     background-repeat: no-repeat;
     background-position: 104% 35%;
   }
 }
-<<<<<<< Updated upstream
 
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .problems {
-    background: linear-gradient(180deg, #111518 72%, #fff 0);
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .problems {
-    background: linear-gradient(180deg, #111518 72%, #fff 0);
-  }
-}
-
-=======
->>>>>>> Stashed changes
 .problems {
   &__conteiner--title {
     padding-top: 50px;
@@ -104,11 +60,7 @@
 
   @media (min-width: 1279px) {
     max-width: 1280px;
-<<<<<<< Updated upstream
-    margin-bottom: -60px;
-=======
     margin-bottom: 60px;
->>>>>>> Stashed changes
     padding-left: 114px;
     padding-right: 96px;
     font-size: 13px;
