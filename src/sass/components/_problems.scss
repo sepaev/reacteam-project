@@ -1,8 +1,43 @@
+//--секция-problems//
+
+.problems__container {
+  max-width: 480px;
+
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: initial;
+
+  @media (min-width: 767px) {
+    max-width: 768px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    .about__container {
+      min-width: 1280px;
+      max-width: 1375px;
+    }
+  }
+}
+
 @media screen and (min-width: 1280px) {
   .problems {
-    background: linear-gradient(180deg, #111518 72%, #fff 0);
+    background: url(/images/Campfire.svg), linear-gradient(180deg, #111518 72%, #fff 0);
     background-repeat: no-repeat;
     background-position: 104% 35%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .problems {
+    background: linear-gradient(180deg, #111518 72%, #fff 0);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .problems {
+    background: linear-gradient(180deg, #111518 72%, #fff 0);
   }
 }
 
@@ -60,7 +95,7 @@
 
   @media (min-width: 1279px) {
     max-width: 1280px;
-    margin-bottom: 60px;
+    margin-bottom: -60px;
     padding-left: 114px;
     padding-right: 96px;
     font-size: 13px;
