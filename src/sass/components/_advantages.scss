@@ -6,8 +6,8 @@
     max-width: 1279px;
   }
   @media (min-width: $min-desktop) {
-    min-width: 1280px;
-    max-width: 1375px;
+    min-width: 1344px;
+    // max-width: 1375px;
   }
 }
 
@@ -36,6 +36,12 @@
     margin-left: 21px;
     width: calc((100%-21px) / 3);
   }
+
+  @media (min-width: $min-desktop) {
+    margin-top: 0px;
+    margin-left: 0px;
+    width: calc((100%) / 3);
+  }
 }
 
 .advantages__item:first-of-type {
@@ -50,6 +56,7 @@
   min-height: 63px;
 
   background-repeat: no-repeat;
+  
   @media (min-width: $min-desktop) {
     min-width: 102px;
     min-height: 104px;
