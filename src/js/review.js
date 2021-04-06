@@ -29,8 +29,8 @@ $(document).ready(function(){
          {
         breakpoint: 1280,
         settings: {
-        slidesToShow: 3,
-        slidesPerRow: 3
+        slidesToShow: 7,
+        slidesPerRow: 7
         } 
       }
     ]
