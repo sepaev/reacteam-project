@@ -108,6 +108,7 @@
     background-color: $white-text;
     text-align: start;
     padding: 20px 30px 20px;
+    box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
 
     @media (min-width: $min-tablet) {
         display: flex;
