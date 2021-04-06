@@ -1,0 +1,91 @@
+.advantages__container {
+  padding-right: 52px;
+  padding-left: 52px;
+  @media (min-width: $min-tablet) {
+    min-width: 768px;
+    max-width: 1279px;
+  }
+  @media (min-width: $min-desktop) {
+    min-width: 1280px;
+    max-width: 1375px;
+  }
+}
+
+.advantages__list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: 767px) {
+    // width: 216px;
+  }
+
+  @media (min-width: $min-tablet) {
+    // width: 688px;
+    flex-wrap: nowrap;
+    margin-left: 0;
+    margin-right: -21px;
+  }
+}
+
+.advantages__item {
+  display: inline-flex;
+  margin-top: 30px;
+  width: calc(100%);
+  align-items: center;
+
+  @media (min-width: $min-tablet) {
+    margin-top: 0px;
+    margin-right: 21px;
+    width: calc((100%-21px) / 3);
+  }
+  @media (min-width: $min-desktop) {
+    margin-right: 21px;
+    // width: calc((100%-21px) / 3);
+  }
+}
+
+.advantages__item:first-of-type {
+  margin-top: 0px;
+}
+
+.advantages__item:before {
+  content: ' ';
+  display: inline-block;
+  min-width: 61px;
+  min-height: 63px;
+//   background: url('../images/female-student.svg');
+}
+
+
+.advantages__item--female-student::before {
+    background: url('../images/female-student.svg');
+  }
+
+.advantages__item--mobile-learning::before {
+    background: url('../images/mobile-lerning.svg');
+  }
+  
+.advantages__item--insurance::before {
+    background: url('../images/insuranse.svg');
+  }
+
+.advantages__text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.43;
+  text-align: left;
+  align-items: center;
+  letter-spacing: 0.08em;
+
+  color: $dark-text-bg;
+  @media (min-width: $min-desktop) {
+    margin-left: -12px;
+    font-size: 20px;
+    line-height: 1.65;
+    letter-spacing: 0.08em;
+  }
+}

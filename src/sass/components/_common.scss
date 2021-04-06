@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 body {
@@ -11,7 +13,12 @@ img {
   height: auto;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   padding: 0;
 }
@@ -23,7 +30,7 @@ a {
 ul {
   list-style: none;
   margin: 0;
-  padding: 0;  
+  padding: 0;
 }
 
 p {
@@ -35,16 +42,22 @@ p {
   max-width: 480px;
   min-width: 320px;
   padding: 50px 20px;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
   margin-left: auto;
   margin-right: auto;
 
   @media (min-width: $min-tablet) {
-      max-width: 768px;
-      padding: 40px 20px;
+    width: 768px;
+    padding: 0 40px 50px;
   }
-  
+
   @media (min-width: $min-desktop) {
-      max-width: 1280px;
+    min-width: 1280px;
+    max-width: 1375px;
+    padding: 0 30px 130px;
   }
 }
 

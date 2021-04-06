@@ -1,0 +1,264 @@
+
+.hero {
+    min-width: 320px;
+    max-width: 480px;
+    min-height: 518px;
+    padding: 0;
+    margin:0;
+    background-color: $white-text;
+    background-image: url("../images/wave.png");
+    background-repeat: no-repeat;
+    background-size: 768px 618px cover;
+    background-position: -50px -5px;
+
+    @media (min-width:768px) {
+        min-height: 459px;
+        max-width:1279px;
+        min-width: 481px;
+        width:768px;
+        background-image: url("../images/wave.png");
+        background-repeat: no-repeat;
+        background-position: 0px -105px;
+    }
+
+    @media (min-width:1280px) {
+        min-width:1280px;
+        width:1280px;
+        max-width: 1375px;
+        min-height: 478px;
+        background-image: url("../images/wave@2x.png");
+        background-size: 1375px 658px cover;
+        background-position: -100px -260px;
+    }
+
+    @media (min-width:1376px) and (max-width:1688px) {
+        min-width: 1376px;
+        width:1688px;
+        max-width: 1688px;
+        min-height: 878px;
+        background-image: url("../images/wave@2x.png");
+        background-size: 1688px 678px cover;
+        background-position: 0 -100px;
+    }
+    
+    &__container {
+    min-width: 320px;
+    width: 320px;
+    min-height: 555px;
+    padding-top: 50px;
+    padding-left:20px;
+    padding-right:20px;
+    margin:auto;
+    text-align: left;
+    background-color: transparent;
+    background-image: url("../images/mobile-hero@2x.png"), url("../images/mobile-hero-gradient@2x.png");
+    background-repeat: no-repeat;
+    background-size: 177px 177px, 208px 148px;
+    background-position:50% 330px, 50% 338.5px;
+    
+    @media (min-width:768px) {
+        min-width: 481px;
+        width:768px;
+        min-height: 0;
+        padding-left:40px;
+        padding-right:40px;
+        display:flex;
+        flex-direction: column;
+        justify-content: left;
+        background-image: url("../images/mobile-hero@2x.png"), url("../images/mobile-hero-gradient@2x.png");
+        background-repeat: no-repeat;
+        background-size: 321px 320px, 375px 268px;
+        background-position:415px 60px, 379px 76px;
+    }    
+
+    @media (min-width:1280px) {
+        min-width:1280px;
+        max-width: 1375px;
+        min-height: 616px;
+        width:1280px;
+        padding-left:130px;
+        padding-right:30px;
+        display:flex;
+        flex-direction: column;
+        justify-content: left;
+        background-image: url("../images/mobile-hero@2x.png"), url("../images/mobile-hero-gradient@2x.png");
+        background-repeat: no-repeat;
+        background-size: 539px 538px, 630px 453px;
+        background-position:700px 38px, 635px 65px;
+    }
+
+
+    @media (min-width:1376px) and (max-width:1688px) {
+        min-width: 1376px;
+        width:1688px;
+        max-width: 1688px;
+        min-height: 778px;
+        padding-left:130px;
+        padding-right:30px;
+        display:flex;
+        flex-direction: column;
+        justify-content: left;
+        background-image: url("../images/mobile-hero@2x.png"), url("../images/mobile-hero-gradient@2x.png");
+        background-repeat: no-repeat;
+        background-size: 719px 718px, 841px 602px;
+        background-position:824px 38px, 738px 75px;
+    }
+    }
+    
+    &__set  {
+    
+        @media (min-width:768px) {
+            width:332px;
+            display:block;
+            // display:flex;
+            // flex-direction: column;
+            justify-content: left;
+        }
+
+        @media (min-width:1280px) {
+            width: 700px;
+            padding-right: 90px;
+        }
+
+        @media (min-width:1376px) and (max-width:1688px) {
+            margin-top: 79px;
+            width: 850px;
+        }
+    }
+
+    &__title {
+        margin-bottom:30px;
+        color: $dark-text-bg;
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 27px;
+        letter-spacing: 0.03em;
+
+        @media (min-width:768px) {
+            padding-right:0px;
+            font-size: 26px;
+            line-height: 34px;
+        }
+
+        @media (min-width:1280px) {
+            font-weight: 800;
+            font-size: 48px;
+            line-height: 60px;
+            letter-spacing: 0.03em;
+        }
+
+        @media (min-width:1376px) and (max-width:1688px) {
+            font-weight: 800;
+            font-size: 58px;
+            line-height: 75px;
+            letter-spacing: 0.03em;
+            padding-right:90px;
+        }
+    }
+
+    &__subtitle {
+        color:$grey-text;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0.08em;
+
+        @media (min-width:1280px) {
+            font-size: 18px;
+            line-height: 33px;
+        }
+
+        @media (min-width:1376px) and (max-width:1688px) {
+            font-size: 20px;
+            line-height: 33px;
+        }
+    }
+
+    &__article {
+        color:$dark-text-bg;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0.08em;
+
+        @media (min-width:768px) {
+            padding-right:45px;
+        }
+
+        @media (min-width:1280px) {
+           
+            font-size: 18px;
+            line-height: 33px;
+        }
+
+        @media (min-width:1376px) and (max-width:1688px) {
+            font-size: 20px;
+            line-height: 33px;
+        }
+    }
+
+    &__item {
+        margin-bottom: 30px;
+        color:$orange-text;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0.08em;
+
+        @media (min-width:1280px) {
+            font-size: 18px;
+            line-height: 33px;   
+        }
+
+        @media (min-width:1376px) and (max-width:1688px) {
+            font-size: 20px;
+            line-height: 33px;
+        }
+    }
+
+    &__btn {
+        margin:30px 10px 30px 10px;
+        padding: 14px 9px 14px 9px;
+        color:$white-text;
+        background-color:$orange-text;
+        outline: transparent;
+        border:none;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        cursor:pointer;
+
+        @media (min-width:768px) {
+            align-items: left;
+            margin:30px 10px 90px 0px;
+        }
+
+        @media (min-width:1280px) {
+            align-items: left;
+            margin:40px 10px 40px 0px;
+            padding: 27px 25px 26px 25px;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 0.14em;
+        }
+
+        @media (min-width:1376px) and (max-width:1688px) {
+            align-items: left;
+            margin:40px 10px 40px 0px;
+            padding: 27px 25px 26px 25px;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 0.14em;
+        }
+
+    }
+
+}
+
+

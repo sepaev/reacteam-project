@@ -1,0 +1,206 @@
+.menu {
+  &__box {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  width: 100ch;
+  position: relative;
+  max-width: 440px;
+
+  @media (min-width: $min-tablet) {
+    max-width: 690px;
+  }
+}
+  
+  &__container {
+    display: flex;
+    justify-content: center;
+    padding: 30px 20px 0px 20px;
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: $modal-bg;
+    z-index: 1050;
+
+    transform: translateY(-100%);
+
+    opacity: 0;
+
+    transition-property: opacity;
+    transition: $transition-function;
+
+    @media (min-width: $min-tablet) {
+      padding: 43px 40px 0px 40px;
+    }
+    @media (min-width: $min-desktop) {
+      display: none;
+    }
+
+    &.is-open {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+
+    top: 0px;
+    right: -5px;
+
+    width: 30px;
+    height: 30px;
+
+    padding: 0px;
+
+    @media (min-width: $min-tablet) {
+      top: 5px;
+    }
+
+    border-radius: none;
+    border-color: transparent;
+    background-color: transparent;
+
+    &:hover {
+      fill: $orange-text;
+      transition: $transition-function;
+    }
+  }
+  &__logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $white-text;
+    font-weight: 700;
+    font-size: 12px;
+
+    @media (max-width: 767px) {
+      width: 65px;
+    }
+
+    @media (min-width: $min-tablet) {
+      font-weight: 800;
+      font-size: 26px;
+      line-height: 32px;
+      width: auto;
+      justify-content: unset;
+    }
+  }
+
+  &__name {
+    display: flex;
+    text-transform: uppercase;
+    justify-content: space-between;
+    width: 65px;
+
+    color: $white-text;
+    font-size: 5px;
+    margin-top: 3px;
+    margin-bottom: 0px;
+
+    @media (min-width: $min-tablet) {
+      width: 115px;
+      margin-top: 0px;
+      font-size: 8px;
+      line-height: 10px;
+      font-weight: 700;
+    }
+  }
+
+  &__hell {
+    @media (min-width: $min-tablet) {
+      color: $orange-text;
+    }
+  }
+
+  &__button--send {
+    width: 260px;
+    height: 48px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    background: transparent;
+    border: 2px solid $orange-text;
+    text-transform: uppercase;
+    color: $orange-text;
+
+    @media (min-width: $min-tablet) {
+      display: none;
+    }
+
+    &:hover,
+    &:focus {
+      color: $dark-text-bg;
+      background: $orange-text;
+      transition: $transition-function;
+    }
+  }
+}
+
+.logo {
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    @media (max-width: 767px) {
+      width: 65px;
+    }
+
+  }
+
+  &__icon {
+    width: 13px;
+    height: 19px;
+
+    @media (min-width: $min-tablet) {
+      width: 22px;
+      height: 30px;
+    }
+  }
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 180%;
+  letter-spacing: 0.03em;
+
+  @media (min-width: $min-tablet) {
+    margin-top: 72px;
+    font-size: 26px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__item {
+    color: $white-text;
+
+    &:hover,
+    &:focus {
+      color: $orange-text;
+      transition: $transition-function;
+    }
+  }
+
+  &__item.currnet {
+    color: $orange-text;
+  }
+}
