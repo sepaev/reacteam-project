@@ -108,21 +108,20 @@
     &__set  {
     
         @media (min-width:768px) {
-            width:332px;
             display:block;
             // display:flex;
             // flex-direction: column;
             justify-content: left;
+            padding-right: 45px;
         }
 
         @media (min-width:1280px) {
-            width: 700px;
-            padding-right: 90px;
+            padding-right: 600px;
         }
 
         @media (min-width:1376px) and (max-width:1688px) {
             margin-top: 79px;
-            width: 850px;
+            padding-right: 700px;
         }
     }
 
@@ -182,7 +181,7 @@
         letter-spacing: 0.08em;
 
         @media (min-width:768px) {
-            padding-right:45px;
+            
         }
 
         @media (min-width:1280px) {
