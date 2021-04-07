@@ -1,10 +1,36 @@
 .reviews {
+  margin: auto;
   background-color: $light-bg;
-  // background-color: grey;
+  @media (min-width: 1280px) {
+    min-width: 1220px;
+    max-width: 1314px;
+    width: 100%;
+    padding-left: 27px;
+    padding-right: 29px;
+  }
+
   &__container {
-    min-width: 320px;
-    max-width: 480px;
+    min-width: $min-flexmobile;
+    max-width: $min-mobile;
     width: auto;
+    position: relative;
+
+    @media (min-width: 480px) and (max-width: 767px) {
+      width: $min-mobile;
+    }
+
+    @media (min-width: 768px) and (max-width: 1279px) {
+      width: $min-tablet;
+      max-width: $min-tablet;
+    }
+
+    @media (min-width: 1280px) {
+      min-width: 1220px;
+      max-width: 1258px;
+      width: 100%;
+      padding-left: 85px;
+      padding-right: 83px;
+    }
   }
 
   &__title {
@@ -12,6 +38,15 @@
     text-align: center;
     color: $dark-text-bg;
     margin-bottom: 20px;
+
+    @media (min-width: 768px) and (max-width: 1279px) {
+      @include font(800, 26px, 33.8px, 0.03em);
+    }
+
+    @media (min-width: 1280px) {
+      @include font(800, 46px, 59.8px, 0.03em);
+      max-width: 1090px;
+    }
   }
 
   // стили для slick слайдера
@@ -21,80 +56,109 @@
       display: flex;
     }
 
-    &-slider {
-      position: relative;
-      min-width: 0;
-    }
-
     &-list {
       overflow: hidden;
     }
 
     &-arrow {
       position: absolute;
-      bottom: -50px;
+      bottom: 69px;
       z-index: 10;
       font-size: 0;
       width: 27px;
       height: 16px;
       border: hidden;
+      @media (min-width: 768px) and (max-width: 1279px) {
+        top: 230px;
+      }
+      @media (min-width: 1280px) {
+        top: 260px;
+      }
     }
-
-    // &-dots {
-    //   display: flex;
-    //   justify-content: center;
-    //   font-size: 0;
-    //   margin: 5px;
-    // }
-    // &-dots li {
-    //   width: 54px;
-    //   height: 54px;
-    //   margin: 5px;
-    // }
-    // &-dots button {
-    //   width: 100%;
-    //   height: 100%;
-    //   border-radius: 50%;
-    //   background: url('../images/reviews-photo1.jpg') 0 0 / 100% no-repeat;
-    //   // background-image: url('../images/reviews-photo1.jpg');
-    // }
-    // &-dots li.slick-active button {
-    //   border-color: red;
-    // }
 
     // стрелочки
     &-prev {
-      left: 20px;
+      left: 27px;
       background: url('/images/arrow-left.svg') 0 0 / 100% no-repeat;
+      @media (min-width: 1280px) {
+        left: 0;
+      }
     }
+
     &-next {
-      right: 20px;
+      right: 28px;
       background: url('/images/arrow-right.svg') 0 0 / 100% no-repeat;
+      @media (min-width: 1280px) {
+        right: 0;
+      }
     }
   }
 }
 
 .reviewer {
-  min-width: 280px;
-  max-width: 440px;
+  min-width: $min-flexmobile - 40px;
+  max-width: $min-mobile - 40px;
   width: 100%;
-  min-height: 568px;
   display: block;
   text-align: center;
   background: $white-color;
   padding: 20px;
   padding-bottom: 30px;
   align-items: flex-start;
+  // position: relative;
 
-  &__item {
-    // width: 280px;
-    margin: 0 5px;
+  @media (min-width: 480px) {
+    width: $min-mobile - 40px;
+  }
+
+  @media (min-width: 768px) {
+    width: $min-tablet - 80px;
+    max-width: $min-tablet - 80px;
+    padding: 40px;
+    box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+    margin: 0;
+  }
+
+  @media (min-width: 1280px) {
+    max-width: 1090px;
+    width: 100%;
+    padding: 50px 112px 51px 82px;
+  }
+
+  &__wrapper {
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-areas:
+        'photo revname'
+        'photo education'
+        'photo description'
+        'social description';
+      grid-template-columns: 150px auto;
+      grid-template-rows: 24px 30px 66px auto;
+      // grid-template-columns: 20% 1fr 15%;
+      grid-gap: 20px;
+      min-height: 200px;
+      float: none;
+    }
+
+    @media (min-width: 1280px) {
+      grid-gap: 10px;
+      grid-template-columns: 160px auto;
+      grid-template-rows: 37px 44px 59px auto;
+    }
   }
 
   &__picture {
     width: 90px;
     border-radius: 50%;
     margin: auto;
+    @media (min-width: 768px) {
+      width: 150px;
+      grid-area: photo;
+    }
+    @media (min-width: 1280px) {
+      margin: 0 10px 10px 0;
+    }
   }
   &__social-link {
     display: flex;
@@ -103,6 +167,16 @@
     height: 70px;
     width: 100%;
     fill: $blue-text;
+    @media (min-width: 768px) {
+      grid-area: social;
+      display: block;
+    }
+  }
+  &__social-icon {
+    @media (min-width: 768px) {
+      width: 30px;
+      height: 30px;
+    }
   }
 
   &__name {
@@ -110,7 +184,17 @@
 
     text-align: center;
     color: $orange-text;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
+    @media (min-width: 768px) {
+      grid-area: revname;
+      max-width: 705px;
+      margin: 0;
+      @include font(800, 20px, 24px, 0.08em);
+      text-align: left;
+    }
+    @media (min-width: 1280px) {
+      @include font(800, 30px, 36.57px, 0.08em);
+    }
   }
 
   &__education {
@@ -119,7 +203,17 @@
 
     color: $grey-text;
     margin-bottom: 10px;
+    @media (min-width: 768px) {
+      grid-area: education;
+      max-width: 705px;
+      margin: 0;
+      text-align: left;
+    }
+    @media (min-width: 1280px) {
+      @include font(500, 14px, 17.07px, 0.08em);
+    }
   }
+
   &__description {
     @include font(500, 12px, 20px, 0em);
     text-align: center;
@@ -128,57 +222,112 @@
     min-height: 100px;
 
     display: -webkit-box;
-    -webkit-line-clamp: 10;
+    -webkit-line-clamp: 12;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    @media (min-width: 768px) {
+      -webkit-line-clamp: 7;
+      grid-area: description;
+      max-width: 705px;
+      text-align: left;
+    }
+    @media (min-width: 1280px) {
+      @include font(500, 18px, 28px, 0em);
+    }
+
+    @media (max-width: 767px) {
+      -webkit-line-clamp: 6;
+      @media (max-width: 623px) {
+        -webkit-line-clamp: 7;
+        @media (max-width: 479px) {
+          -webkit-line-clamp: 8;
+          @media (max-width: 448px) {
+            -webkit-line-clamp: 9;
+            @media (max-width: 416px) {
+              -webkit-line-clamp: 10;
+              @media (max-width: 384px) {
+                -webkit-line-clamp: 11;
+                @media (max-width: 352px) {
+                  -webkit-line-clamp: 12;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
   &__description:hover {
     -webkit-line-clamp: 100;
   }
+
   &__description:hover + &__button {
     display: none;
   }
-  // &__description--open {
-  //   overflow: visible;
-  // }
-  &__button {
-    display: block;
-    text-align: center;
-    justify-content: center;
-    min-width: 240px;
-    max-width: 400px;
-    margin: auto;
+
+  &__description-full {
+    display: none;
+  }
+  &__read-more--input {
+    display: none;
+    &:checked ~ .reviewer__description-full {
+      display: initial;
+    }
+    &:checked ~ .reviewer__description-short,
+    &:checked ~ .reviewer__read-more--label {
+      display: none;
+    }
+  }
+
+  &__read-more--label {
+    display: inline-block;
     color: $orange-text;
     text-decoration: underline;
-    border: hidden;
-    // position: absolute;
-    bottom: 0;
     z-index: 20;
     background-color: transparent;
-    // transform: translateX(30%);
+    @media (min-width: 768px) {
+      grid-area: description;
+    }
   }
 }
 
 .reviewers {
-  // display: flex;
-  padding: 20px 30px 50px;
+  padding: 20px 30px 0;
+  max-width: 1090px;
+  @media (min-width: 768px) {
+    padding-top: 30px;
+  }
+  @media (min-width: 768px) {
+    padding-top: 40px;
+  }
   &__set {
     width: 182px;
     display: flex;
     margin: 0 auto;
+
+    @media (min-width: 768px) {
+      width: 588px;
+    }
   }
   &__item {
     width: 54px;
     height: 54px;
     margin: 0 5px;
     text-align: center;
-    // border-radius: 50%;
-  }
-  &__personal-link {
-    // border-radius: 50%;
+    @media (min-width: 768px) {
+      margin: 0 15px;
+    }
   }
   &__picture {
     border-radius: 50%;
+  }
+
+  & .slick {
+    &-current .reviewers__picture {
+      @media (min-width: 768px) {
+        border: 1px solid $orange-color;
+      }
+    }
   }
 }
 * {

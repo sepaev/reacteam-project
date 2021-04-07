@@ -4,12 +4,15 @@
     justify-content: space-between;
     align-items: center;
     padding: 30px 20px;
+    max-width: 480px;
 
     @media (min-width: $min-tablet) {
+      max-width: 768px;
       padding: 42px 40px 70px 40px;
     }
     @media (min-width: $min-desktop) {
-      padding: 33px 5px 45px 5px;
+      max-width: 1280px;
+      padding: 33px 30px 45px 30px;
     }
   }
 
@@ -18,13 +21,17 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: 767px) {
+      width: 65px;
+    }
   }
 
   &__nav {
     display: flex;
-    margin-left: 144px;
-    margin-right: 60px;
-    @media (max-width: $min-desktop) {
+
+    margin-left: 130px;
+
+    @media (max-width: 1279px) {
       display: none;
     }
   }
@@ -52,6 +59,9 @@
       height: 70px;
       font-size: 14px;
       margin-right: 0px;
+    }
+    @media (min-width: 1280px) {
+      margin-left: 30px;
     }
   }
 }

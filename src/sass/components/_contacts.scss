@@ -12,9 +12,10 @@
     }
 }
  
-.contact{
+.contact-overlay{
   @media screen and (max-width: 479px) {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/footer-mobile.jpg);
+    height: 520px;
+  background-image:  linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(../images/contact-mobile.jpg);
 
   background-position: center;
   background-size: cover;
@@ -22,14 +23,14 @@
   @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
-   background-image:  linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/footer-mobile@2x.jpg);
+   background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ),  url(../images/contact-mobile@2x.jpg); 
    background-size: cover;
    background-position: center;
   }
 }
    @media screen and (min-width: $min-mobile) {
     height: 520px;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/footer-mobile.jpg);
+    background-image:  linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ),  url(../images/contact-mobile.jpg);
     background-size: 480px 520px;
     background-position: center;
   
@@ -37,44 +38,48 @@
   @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/footer-mobile@2x.jpg);
-  background-size: 480px 520px;
+  background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(../images/contact-mobile@2x.jpg);
+  background-size: cover;
   background-position: center;
   } 
 }
    @media screen and (min-width: $min-tablet ){
     height: 520px;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/footer-tablet.jpg);
+    background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ),  url(../images/contact-tablet.jpg);
     background-size: 768px 520px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ),  url(../images/contact-tablet@2x.jpg);
+    background-size: 768px 520px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+}
+    @media screen and (min-width:$min-desktop){
+    height: 840px;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/contact-desctop.jpg);
+    background-size: cover;
     background-position: center;
     
 
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/footer-tablet@2x.jpg);
-    background-size: 768px 520px;
-    background-position: center;
-  } 
-}
-    @media screen and (min-width:$min-desktop){
-    height: 840px;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/footer-desctop.jpg);
-    background-size: cover;
-    background-position: center;
-
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/footer-desctop@2x.jpg);
+    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(../images/contact-desctop@2x.jpg);
     background-size: cover;
     background-position: center;
   } 
 }
+}
 
+.contacts-field{
 
-
-&__title {
+  &__title {
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 50px;
@@ -115,7 +120,7 @@
 }
 
 &__title--orange {
-    font-family: Montserrat;
+
     font-style: normal;
     font-weight: 800;
     font-size: 14px;
@@ -146,7 +151,7 @@
   padding-left: 20px;
   text-align: center;
   
-  font-family: Montserrat;
+  
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
@@ -210,7 +215,8 @@
 }
 }
 }
-.contact-form {
+
+.contacts-form {
   
   margin-top: 30px;
 
@@ -264,52 +270,41 @@
 
 &__item {
 
-  position: absolute;
-  top: 50%;
-  transform:translateY(-50%);
-  
-  left: 28px;
   font-family: Montserrat;
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
   line-height: 1.214;
   
-  color: $white-text ;
+  color: $white-text;
+  
+  
+ 
 }
 
 &__text {
   
+  display: block;
   margin: 0px;
   padding: 0px;
   width: 100%;
   height: 100%;
-  padding: 10px 100px;
+  padding-left: 28px;
+  padding-right: 28px;
   background-color: transparent;
-  border-color: white;
-  color: white;
+  border: 1px solid $white-color;
   
+  
+  
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.214;
+  
+  color: $white-text;
 }
-
-&__text:hover + &__item{
-  transform: translateY(-40px);
-  transition: transform  $transition-function;
-  border-color:  $white-text;
-
-
-
-@media screen and (min-width:  $min-tablet) {
   
-    transform: translateY(-40px)
-  
-}
 
-@media screen and (min-width:$min-desktop) {
-  
-    transform: translateY(-50px)
-  
-}
-}
 
 &__button{
   margin-top: 50px;
@@ -332,6 +327,7 @@
     width: 354px;
 }
 }
+
 &__btn {
   padding: 16px 10px;
   width: 100%;
@@ -346,5 +342,4 @@
 
   color: $white-text;
 }
-
 }

@@ -4,11 +4,13 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 333;
+  z-index: 1100;
+
 
   background-color: $modal-bg;
 
   opacity: 1;
+  overflow: hidden;
 
   transition-duration: $transition-function;
 }
@@ -119,7 +121,9 @@
 
     &:hover,
     &:focus {
-      background: $orange-text;
+
+      background: $white-color;
+      color: $dark-text-bg;
       transition-duration: $transition-function;
     }
   }
@@ -147,9 +151,10 @@
   border-color: $shadow10-cards;
   background-color: $dark-text-bg;
 
-  &:hover .modal-close,
-  &:focus .modal-close {
-    fill: var(--button-color);
+  &:hover,
+  &:focus {
+    collor: $white-text;
+
   }
 }
 
@@ -157,10 +162,16 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  fill: var(--main-text-color);
+  fill: $white-text;
 
   transition-property: fill;
   transition: $transition-function;
+
+  &:hover,
+  &:focus {
+    fill: $dark-text-bg;
+  }
+
 }
 
 .modal-form {
@@ -187,12 +198,15 @@
 
   &__group:hover .modal__input,
   &__group:focus-within .modal__input {
-    border-color: var(--button-color);
+    border-color: $dark-text-bg;
+
   }
 
   &__group:hover .modal__input + .modal__icon,
   &__group:focus .modal__input + .modal__icon {
-    fill: var(--button-color);
+
+    fill: $dark-text-bg;
+
   }
 }
 
