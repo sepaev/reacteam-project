@@ -1,23 +1,26 @@
 .footer {
   padding-top: 30px;
-}
+  // position: relative;
+
+ 
  
 .footer__container{
   min-width: 320px;
-  padding-left: 20px;
-  padding-right: 20px;
+  height: 200px;
   margin-left: auto;
   margin-right: auto;
-  position: relative;
   padding-top: 0px;
-  
-  @media scree and (max-width: 767px ){
-    flex-direction: column;   
-  }
-  @media scree and (min-width: 768px ) {
-    flex-direction: row;
-    justify-content: space-between;
-  }
+  padding: 40px  60px;
+
+  @media screen and (min-width: 768px ) {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+   @media screen and (min-width: 1280px) {
+  justify-content: flex-start;
+   }
+}
 }
 
 .footer-logo {
@@ -61,26 +64,43 @@
 color: $dark-text-bg;
 
 }
+
+&__item--orange{
+
+  @media screen and (min-width: 768px){
+  color: $orange-text;
+}} 
+
 }
+
 
 .footer-sociall { 
   
-   margin-top: 20px;
+   
    text-align: center;
   
    
  
-   @media screen and(min-width: $min-tablet){
-     
-   }
+@media screen and (max-width: 479px) {
+  margin-top: 20px;
+}
 
+   @media screen and(min-width: $min-tablet){
+    display: flex;
+    align-items: center;
+   }
+@media screen and ( min-width: 1280px) {
+  margin-left: 290px;
+}
 
 
 
 
 &__link {
+  display: flex;
+  align-items: center;
   margin-left: 10px;
- 
+  margin-right: 48px;
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -88,6 +108,8 @@ color: $dark-text-bg;
 
   color: #111518;
 }
+  
+
 
 &__item{
   fill:  $orange-text;
@@ -95,11 +117,13 @@ color: $dark-text-bg;
 
 &__icon {
   
-  position: absolute;
-  
+  // position: absolute;
+  // display: block;
+  margin-left: auto;
+  margin-right: auto;
   width: 40px;
   height: 40px;
-  margin-top: 30px;
+  
   background-image:  url(../images/Group.svg),  radial-gradient(110.28% 110.28% at 20.5% 87.39%, #FAE100 0%, #FADC04 5.44%, #FBCE0E 11.67%, #FCB720 18.29%, #FE9838 25.14%, #FF7950 30.54%, #FF1C74 49.22%, #6C1CD1 100%);
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -107,6 +131,25 @@ color: $dark-text-bg;
   top: 70%;
   left: 50%;
   transform: translate(-50%);
-  margin-bottom: 30px;
+  
+  @media screen and (max-width: 767px) {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
 }
+@media screen and (min-width: 768px) {
+  .footer-sociall__link::after {
+    content: '';
+    display: inline-block;
+    height: 40px;
+    border: 1px solid #B9B9B9;
+    margin-left: 24px;
+    background-image: url(../images/vector1.svg);
+  }
+}
+
+
+}
+
+
 }
