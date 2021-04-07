@@ -1,5 +1,5 @@
 .contacts {
-  // padding-top: 50px;
+  
   background-color: $dark-text-bg;
   @media screen and (min-width: $min-desktop) {
     height: 840px;
@@ -7,7 +7,7 @@
 }
   
 .contacts__overlay {
-  padding-top: 50px;
+  
     
   @media screen and (max-width: 479px) {
       height: 520px;
@@ -64,21 +64,32 @@
   }
 
   .contacts__container{
-    @media screen and (max-width: 479px) {
-  
+    
+   @media screen and (max-width: 767px){
     min-width: 320px;
     padding-left: 20px;
     padding-right: 20px;
     margin-left: auto;
     margin-right: auto;
-  } 
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
     
-  @media screen and (min-width:$min-desktop) {
+  @media screen and (min-width: 768px) {
       padding-left: 40px;
       padding-right: 40px;
+      padding-top: 50px;
+      padding-bottom: 70px;
+    }
+
+    @media screen and (min-width: 1280px){
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top: 100px;
+      padding-bottom: 70px;
     }
   }
-   
+ 
   .contacts{
   
     &__title {
@@ -210,7 +221,7 @@
 }
 .contacts-form {
   margin-top: 30px;
-
+  margin-bottom: 50px;
   @media screen and (min-width: $min-tablet) {
     margin-top: 40px;
   }
@@ -219,7 +230,7 @@
     margin-top: 56px;
   }
 
-  &__wrapper:not(:first-child) {
+  &__item:not(:first-child) {
     margin-top: 30px;
 
     @media screen and (min-width: $min-desktop) {
@@ -227,13 +238,25 @@
     }
   }
 
-  &__wrapper {
+  &__item {
     position: relative;
-    height: 48px;
-    width: 280px;
-    margin-right: auto;
-    margin-left: auto;
-
+    // height: 48px;
+    // width: 280px;
+    // margin-right: auto;
+    // margin-left: auto;
+    
+      display: block;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 1.214;
+      margin-right: auto;
+      margin-left: auto;
+      height: 48px;
+      width: 280px;
+  
+      color: $white-text;
+  
     @media screen and (min-width: $min-tablet) {
       height: 48px;
       width: 390px;
@@ -245,18 +268,10 @@
     }
   }
 
-  &__item {
-    
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 1.214;
-
-    color: $white-text;
-  }
+ 
 
   &__text {
-    display: block;
+    
     margin: 0px;
     padding: 0px;
     width: 100%;
@@ -265,55 +280,51 @@
     padding-right: 28px;
     background-color: transparent;
     border: 1px solid #ffffff;
-
+   
+    
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
     line-height: 1.214;
-
+  
     color: $white-text;
   }
 
-  &__button-wrapper {
-    margin-top: 50px;
+  
+&__button{
+  margin-top: 50px;
+  height: 48px;
+  width: 260px;
+  margin-right: auto;
+  margin-left: auto;
+
+
+@media screen and (min-width:  $min-tablet){
+    margin-top: 31px;
     height: 48px;
     width: 260px;
-    margin-right: auto;
-    margin-left: auto;
+  
+}
 
-    @media screen and (min-width: $min-tablet) {
-      margin-top: 31px;
-      height: 48px;
-      width: 260px;
-    }
+@media screen and (min-width:$min-desktop) {
+    margin-top: 80px;
+    height: 70px;
+    width: 354px;
+}
+}
 
-    @media screen and (min-width: $min-desktop) {
-      margin-top: 80px;
-      height: 70px;
-      width: 354px;
-    }
-  }
-
-  &__button {
-    padding: 16px 10px;
-    width: 100%;
-    background-color: $orange-text;
-    margin-top: 40px;
+&__btn {
+  padding: 16px 10px;
+  width: 100%;
+  background-color: $orange-text;
     
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 1.25;
-    text-transform: uppercase;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1.25;
+  text-transform: uppercase;
 
-    color: $white-text;
-
-    @media screen and ( min-width: 768px) {
-      margin-top: 30px;
-    }
-@media screen and (min-windth: 1280px) {
-  margin-top: 80px;
+  color: $white-text;
 }
-  }
 }
-
