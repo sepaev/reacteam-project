@@ -1,77 +1,73 @@
 .contacts {
   padding-top: 50px;
-
   min-width: 320px;
-
   height: 520px;
   @media screen and (min-width: $min-desktop) {
     height: 840px;
   }
-}
 
-.contacts-overlay {
-  @media screen and (max-width: 479px) {
-    height: 520px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-      url(../images/contact-mobile.jpg);
-
-    background-position: center;
-    background-size: cover;
-
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  &__overlay {
+    @media screen and (max-width: 479px) {
+      height: 520px;
       background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url(../images/contact-mobile@2x.jpg);
-      background-size: cover;
+        url(../images/contact-mobile.jpg);
+
       background-position: center;
-    }
-  }
-  @media screen and (min-width: $min-mobile) {
-    height: 520px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-      url(../images/contact-mobile.jpg);
-    background-size: 480px 520px;
-    background-position: center;
-
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url(../images/contact-mobile@2x.jpg);
       background-size: cover;
-      background-position: center;
-    }
-  }
-  @media screen and (min-width: $min-tablet) {
-    height: 520px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-      url(../images/contact-tablet.jpg);
-    background-size: 768px 520px;
-    background-position: center;
-    background-repeat: no-repeat;
 
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url(../images/contact-mobile@2x.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+    }
+    @media screen and (min-width: $min-mobile) {
+      height: 520px;
       background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url(../images/contact-tablet@2x.jpg);
+        url(../images/contact-mobile.jpg);
+      background-size: 480px 520px;
+      background-position: center;
+
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url(../images/contact-mobile@2x.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+    }
+    @media screen and (min-width: $min-tablet) {
+      height: 520px;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url(../images/contact-tablet.jpg);
       background-size: 768px 520px;
       background-position: center;
       background-repeat: no-repeat;
-    }
-  }
-  @media screen and (min-width: $min-desktop) {
-    height: 840px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-      url(../images/contact-desctop.jpg);
-    background-size: cover;
-    background-position: center;
 
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url(../images/contact-tablet@2x.jpg);
+        background-size: 768px 520px;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+    @media screen and (min-width: $min-desktop) {
+      height: 840px;
       background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url(../images/contact-desctop@2x.jpg);
+        url(../images/contact-desctop.jpg);
       background-size: cover;
       background-position: center;
+
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          url(../images/contact-desctop@2x.jpg);
+        background-size: cover;
+        background-position: center;
+      }
     }
   }
-}
 
-.contacts-field {
   &__title {
     padding-left: 20px;
     padding-right: 20px;
@@ -256,7 +252,7 @@
     color: $white-text;
   }
 
-  &__button {
+  &__button-wrapper {
     margin-top: 50px;
     height: 48px;
     width: 260px;
@@ -276,7 +272,7 @@
     }
   }
 
-  &__btn {
+  &__button {
     padding: 16px 10px;
     width: 100%;
     background-color: $orange-text;
