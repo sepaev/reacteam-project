@@ -20,7 +20,7 @@
         background-position: 0px -105px;
     }
 
-    @media (min-width:1280px) {
+    @media  (min-width:1280px) and (max-width:1375px) {
         min-width:1280px;
         width:1280px;
         max-width: 1375px;
@@ -30,7 +30,7 @@
         background-position: -100px -260px;
     }
 
-    @media (min-width:1376px) and (max-width:1688px) {
+    @media (min-width:1376px)   {
         min-width: 1376px;
         width:1688px;
         max-width: 1688px;
@@ -50,10 +50,19 @@
     margin:auto;
     text-align: left;
     background-color: transparent;
-    background-image: url("../images/mobile-hero@2x.png"), url("../images/mobile-hero-gradient@2x.png");
     background-repeat: no-repeat;
     background-size: 177px 177px, 208px 148px;
     background-position:50% 330px, 50% 338.5px;
+    background-image: url('../images/mobile-hero.png'), url('../images/mobile-hero-gradient.png');
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/mobile-hero@2x.png'),
+        url('../images/mobile-hero-gradient@2x.png');
+    }
     
     @media (min-width:768px) {
         min-width: 481px;
@@ -64,13 +73,23 @@
         display:flex;
         flex-direction: column;
         justify-content: left;
-        background-image: url("../images/mobile-hero@2x.png"), url("../images/mobile-hero-gradient@2x.png");
         background-repeat: no-repeat;
         background-size: 321px 320px, 375px 268px;
         background-position:415px 60px, 379px 76px;
+        background-image: url('../images/tablet-hero.png'), url('../images/tablet-hero-gradient.png');
+
+        @media screen and (min-device-pixel-ratio: 2),
+          screen and (-webkit-min-device-pixel-ratio: 2),
+          screen and (-o-min-device-pixel-ratio: 2/1),
+          screen and (min-resolution: 192dpi),
+          screen and (min-resolution: 2dppx) {
+          background-image: url('../images/tablet-hero@2x.png'),
+            url('../images/tablet-hero-gradient@2x.png');
+        }
+      }
     }    
 
-    @media (min-width:1280px) {
+    @media  (min-width:1280px) and (max-width:1375px) {
         min-width:1280px;
         max-width: 1375px;
         min-height: 616px;
@@ -80,14 +99,22 @@
         display:flex;
         flex-direction: column;
         justify-content: left;
-        background-image: url("../images/mobile-hero@2x.png"), url("../images/mobile-hero-gradient@2x.png");
         background-repeat: no-repeat;
         background-size: 539px 538px, 630px 453px;
         background-position:700px 38px, 635px 65px;
+        background-image: url('../images/desctop-hero.png'),
+        url('../images/desctop-hero-gradient.png');
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (-webkit-min-device-pixel-ratio: 2),
+        screen and (-o-min-device-pixel-ratio: 2/1),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url('../images/desctop-hero@2x.png'), url('../images/desctop-hero-gradient@2x.png');
+      }
     }
 
-
-    @media (min-width:1376px) and (max-width:1688px) {
+    @media (min-width:1376px)   {
         min-width: 1376px;
         width:1688px;
         max-width: 1688px;
@@ -97,15 +124,21 @@
         display:flex;
         flex-direction: column;
         justify-content: left;
-        background-image: url("../images/mobile-hero@2x.png"), url("../images/mobile-hero-gradient@2x.png");
         background-repeat: no-repeat;
         background-size: 719px 718px, 841px 602px;
         background-position:824px 38px, 738px 75px;
+        background-image: url('../images/desctop-hero.png'), url('../images/desctop-hero-gradient.png');
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (-webkit-min-device-pixel-ratio: 2),
+        screen and (-o-min-device-pixel-ratio: 2/1),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url('../images/desctop-hero@2x.png'), url('../images/desctop-hero-gradient@2x.png');
+      }
     }
-    }
+  }
     
     &__set  {
-    
 
         @media (min-width:768px) {
             display:block;
@@ -115,11 +148,11 @@
             padding-right: 380px;
         }
 
-        @media (min-width:1280px) {
+        @media  (min-width:1280px) and (max-width:1375px) {
             padding-right: 600px;
         }
 
-        @media (min-width:1376px) and (max-width:1688px) {
+        @media (min-width:1376px)   {
             margin-top: 79px;
             padding-right: 700px;
         }
@@ -139,14 +172,14 @@
             line-height: 34px;
         }
 
-        @media (min-width:1280px) {
+        @media  (min-width:1280px) and (max-width:1375px) {
             font-weight: 800;
             font-size: 48px;
             line-height: 60px;
             letter-spacing: 0.03em;
         }
 
-        @media (min-width:1376px) and (max-width:1688px) {
+        @media (min-width:1376px)   {
             font-weight: 800;
             font-size: 58px;
             line-height: 75px;
@@ -162,12 +195,12 @@
         line-height: 22px;
         letter-spacing: 0.08em;
 
-        @media (min-width:1280px) {
+        @media  (min-width:1280px) and (max-width:1375px) {
             font-size: 18px;
             line-height: 33px;
         }
 
-        @media (min-width:1376px) and (max-width:1688px) {
+        @media (min-width:1376px)   {
             font-size: 20px;
             line-height: 33px;
         }
@@ -181,13 +214,13 @@
         line-height: 22px;
         letter-spacing: 0.08em;
 
-        @media (min-width:1280px) {
+        @media  (min-width:1280px) and (max-width:1375px) {
             margin-bottom: 40px;
             font-size: 18px;
             line-height: 33px;
         }
 
-        @media (min-width:1376px) and (max-width:1688px) {
+        @media (min-width:1376px)   {
             margin-bottom: 40px;
             font-size: 20px;
             line-height: 33px;
@@ -202,12 +235,12 @@
         line-height: 22px;
         letter-spacing: 0.08em;
 
-        @media (min-width:1280px) {
+        @media  (min-width:1280px) and (max-width:1375px) {
             font-size: 18px;
             line-height: 33px;   
         }
 
-        @media (min-width:1376px) and (max-width:1688px) {
+        @media (min-width:1376px)   {
             font-size: 20px;
             line-height: 33px;
         }
@@ -234,7 +267,7 @@
             margin:0 10px 90px 0px;
         }
 
-        @media (min-width:1280px) {
+        @media  (min-width:1280px) and (max-width:1375px) {
             align-items: left;
             margin:0 10px 40px 0px;
             padding: 27px 25px 26px 25px;
@@ -244,7 +277,7 @@
             letter-spacing: 0.14em;
         }
 
-        @media (min-width:1376px) and (max-width:1688px) {
+        @media (min-width:1376px)   {
             align-items: left;
             margin:0 10px 40px 0px;
             padding: 27px 25px 26px 25px;
