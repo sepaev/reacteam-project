@@ -6,7 +6,6 @@
   height: 100%;
   z-index: 1100;
 
-
   background-color: $modal-bg;
 
   opacity: 1;
@@ -121,7 +120,6 @@
 
     &:hover,
     &:focus {
-
       background: $white-color;
       color: $dark-text-bg;
       transition-duration: $transition-function;
@@ -154,7 +152,6 @@
   &:hover,
   &:focus {
     collor: $white-text;
-
   }
 }
 
@@ -171,7 +168,6 @@
   &:focus {
     fill: $dark-text-bg;
   }
-
 }
 
 .modal-form {
@@ -199,14 +195,11 @@
   &__group:hover .modal__input,
   &__group:focus-within .modal__input {
     border-color: $dark-text-bg;
-
   }
 
   &__group:hover .modal__input + .modal__icon,
   &__group:focus .modal__input + .modal__icon {
-
     fill: $dark-text-bg;
-
   }
 }
 
