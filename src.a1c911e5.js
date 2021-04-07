@@ -9,4 +9,4 @@ $(document).ready(function(){$(".reviewer").slick({arrows:!0,initialSlide:5,auto
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/mobile-menu"),require("./js/modal"),require("./js/review");
 },{"./sass/main.scss":"clu1","./js/mobile-menu":"sByI","./js/modal":"RSqK","./js/review":"KR3l"}]},{},["Focm"], null)
-//# sourceMappingURL=/reacteam-project/src.0383d698.js.map
+//# sourceMappingURL=/reacteam-project/src.a1c911e5.js.map
