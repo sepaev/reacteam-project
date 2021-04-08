@@ -1,41 +1,42 @@
 <section class="contacts" id="contacts">
   <div class="contacts__overlay">
     <div class="contacts__container">
-    <h2 class="contacts__title">
-      Регистрация на <span class="contacts__title--orange"> бесплатную</span><br> телефонную
-      <span class="contacts__title--orange"> консультацию </span>по нюансам ЗНО по английскому языку
-    </h2>
-    <p class="contacts__text">
-      Оставь заявку на участие в <span class="contacts__text--orange"> бесплатном занятии.</span><br> С
-      вами свяжется консультант и ответит на вопросы
-    </p>
-    <form class="contacts-form">
-      
-        <label class="contacts-form__item" for="name">Имя*
-        <input
-          class="contacts-form__text"
-          type="text"
-          name="name"
-          id="name"
-          pattern="^[a-zA-Z]+$"
-          required
+      <h2 class="contacts__title">
+        Регистрация на <span class="contacts__title--orange">бесплатную</span><br />
+        телефонную <span class="contacts__title--orange">консультацию</span> по нюансам ЗНО по
+        английскому языку
+      </h2>
+      <p class="contacts__text">
+        Оставь заявку на участие в <span class="contacts__text--orange"> бесплатном занятии.</span
+        ><br />
+        С вами свяжется консультант и ответит на вопросы
+      </p>
+      <form class="contacts-form">
+        <label class="contacts-form__label" for="name">
+          <input
+            class="contacts-form__input"
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Имя*"
+            pattern="[A-Za-zА-Яа-яЁё_ ]+$"
+            required
         /></label>
-      
-        <label class="contacts-form__item" for="phone">Телефон*
-        <input
-          class="contacts-form__text"
-          type="tel"
-          name="phone"
-          id="phone"
-          pattern="[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}"
-          required
+
+        <label class="contacts-form__label" for="phone">
+          <input
+            class="contacts-form__input"
+            title="только цыфры без +38"
+            type="tel"
+            name="phone"
+            id="phone"
+            placeholder="Телефон*"
+            pattern="[0-9]{10}"
+            required
         /></label>
-      
-      <div class="contacts-form__button">
-        <button class="contacts-form__btn" type="submit">хочу на бесплатное занятие</button>
-      </div>
-    
-    </form>
-  </div>
+
+        <button class="contacts-form__button" type="submit">хочу на бесплатное занятие</button>
+      </form>
+    </div>
   </div>
 </section>
