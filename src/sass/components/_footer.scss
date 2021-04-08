@@ -35,18 +35,32 @@
       color: $dark-text-bg;
     }
 
+<<<<<<< Updated upstream
     &__link {
       width: 15px;
       height: 20.5px;
+=======
+  &__text--orange {
+    @media screen and (min-width: $min-tablet) {
+      color: $orange-text;
+>>>>>>> Stashed changes
     }
 
     &__item {
       // background-image: url(../images/helleng.svg);
 
+<<<<<<< Updated upstream
       font-style: normal;
       font-weight: bold;
       font-size: 8px;
       line-height: 10px;
+=======
+  @media screen and(min-width: $min-tablet) {
+    display: flex;
+    align-items: center;
+    margin-left: 153px;
+  }
+>>>>>>> Stashed changes
 
       text-transform: uppercase;
 
