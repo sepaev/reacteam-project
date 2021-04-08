@@ -125,7 +125,12 @@
     padding: 50px 112px 51px 82px;
   }
 
+  &__item {
+    outline: none;
+  }
+
   &__wrapper {
+    outline: none;
     @media (min-width: 768px) {
       display: grid;
       grid-template-areas:
