@@ -57,6 +57,9 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
     background-color: $white-text;
+    position: relative;
+    top: 0;
+    left: 0;
 
     @media screen and (min-width: 1280px) {
       flex-basis: calc(100% / 3 - 20px);
@@ -177,8 +180,14 @@
     justify-content: center;
     align-items: center;
 
-    padding-top: 39px;
-    padding-bottom: 39px;
+    margin-top: 39px;
+    margin-bottom: 39px;
     fill: $orange-text;
   }
+}
+
+.work__item:hover {
+  box-shadow: 2px 2px white, 4px 4px $orange-text;
+  top: -8px;
+  left: -8px;
 }

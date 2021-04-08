@@ -25,13 +25,15 @@
   .problems {
     background: url(/images/Campfire.svg), linear-gradient(180deg, #111518 72%, #fff 0);
     background-repeat: no-repeat;
-    background-position: 104% 35%;
+    background-position: 105% 15%;
+    padding-top: 100px;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .problems {
     background: linear-gradient(180deg, #111518 72%, #fff 0);
+    padding-top: 50px;
   }
 }
 
@@ -43,7 +45,7 @@
 
 .problems {
   &__conteiner--title {
-    padding-top: 50px;
+    // padding-top: 100px;
     padding-bottom: 25px;
   }
 
@@ -59,7 +61,7 @@
     color: $white-text;
 
     @media screen and (max-width: 767px) {
-      text-align: center;
+      text-align: left;
     }
 
     @media screen and (min-width: 1280px) {
