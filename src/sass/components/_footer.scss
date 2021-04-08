@@ -5,25 +5,30 @@
   .footer__container {
     min-width: 320px;
     height: 200px;
-    margin-left: auto;
-    margin-right: auto;
+   
     padding-top: 0px;
     padding: 40px 60px;
+ @media screen and (max-width: 480px) {
+     margin-left: auto;
+    margin-right: auto;
+ }
 
     @media screen and (min-width: 768px) {
+      width: 768px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-
+    }
       @media screen and (min-width: 1280px) {
-        justify-content: flex-start;
+        justify-content: space-evenly;
         max-width: 1090px;
         width: 100%;
       }
-    }
+    
   }
-
-  .footer-logo {
+}
+  
+.footer-logo {
     text-align: center;
 
     &__label {
@@ -61,44 +66,59 @@
   }
 
   .footer-sociall {
-    text-align: center;
-
+    
+  text-align: center;
     @media screen and (max-width: 479px) {
       margin-top: 20px;
-    }
+      text-align: center;
+     
+    }  
 
-    @media screen and(min-width: $min-tablet) {
+    @media screen and(min-width: 768px) {
       display: flex;
       align-items: center;
+      margin-left: 203px;
+      
     }
+   
     @media screen and (min-width: 1280px) {
       margin-left: 290px;
+      justify-content: space-evenly
     }
-
+     
+    &__item {
+      fill: $orange-text;
+    }
+    
     &__link {
-      display: flex;
-      align-items: center;
+      
       margin-left: 10px;
-      margin-right: 48px;
+      
       font-style: normal;
       font-weight: 600;
       font-size: 14px;
       line-height: 1.21;
 
       color: #111518;
-    }
+@media screen and (max-width: 479px){
+  display: block;
+  width: 199px;
+ 
+}
 
-    &__item {
-      fill: $orange-text;
+      @media screen and ( min-width: 768px){
+        display: flex;
+        align-items: center;
+      }
     }
 
     &__icon {
       // position: absolute;
-      // display: block;
-      margin-left: auto;
-      margin-right: auto;
+      display: block;
+      
       width: 40px;
       height: 40px;
+
 
       background-image: url(../images/Group.svg),
         radial-gradient(
@@ -122,17 +142,32 @@
       @media screen and (max-width: 767px) {
         margin-top: 30px;
         margin-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @media screen and (min-width: 1280px){
+        margin-right: 40px;
       }
     }
+     
     @media screen and (min-width: 768px) {
+          
+    
       .footer-sociall__link::after {
+       
         content: '';
         display: inline-block;
         height: 40px;
         border: 1px solid #b9b9b9;
         margin-left: 24px;
         background-image: url(../images/vector1.svg);
+
       }
     }
   }
-}
+ 
+  
+
+
+
+
